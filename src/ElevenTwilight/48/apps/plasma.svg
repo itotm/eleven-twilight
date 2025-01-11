@@ -1,0 +1,24 @@
+<svg width="48" height="48" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="linearGradient4960" x1="11.11" y1="2.65" x2="14.29" y2="5.82" gradientUnits="userSpaceOnUse">
+      <stop style="stop-color:#26a0f2;stop-opacity:1" offset="0"/>
+      <stop style="stop-color:#219aed;stop-opacity:1" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient3502" x1="11.11" y1="2.65" x2="14.29" y2="5.82" gradientUnits="userSpaceOnUse">
+      <stop style="stop-color:#8de0ff;stop-opacity:1" offset="0"/>
+      <stop style="stop-color:#5ab9f2;stop-opacity:1" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient4364" x1="11.11" y1="2.65" x2="14.29" y2="5.82" gradientUnits="userSpaceOnUse">
+      <stop style="stop-color:#44aae9;stop-opacity:1" offset="0"/>
+      <stop style="stop-color:#49aeea;stop-opacity:1" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient5398" x1="11.11" y1="5.29" x2="14.29" y2="8.47" gradientUnits="userSpaceOnUse">
+      <stop style="stop-color:#2e97e2;stop-opacity:1" offset="0"/>
+      <stop style="stop-color:#2d96e1;stop-opacity:1" offset="1"/>
+    </linearGradient>
+  </defs>
+  <path d="M 30,8 26,12 32,18 26,24 30,28 40,18 Z" style="fill:url(#linearGradient4960);fill-opacity:1;stroke-width:2"/>
+  <circle style="fill:url(#linearGradient3502);fill-opacity:1;stroke-width:2" cx="16" cy="10" r="2"/>
+  <circle style="fill:url(#linearGradient4364);fill-opacity:1;stroke-width:2" cx="11" cy="23" r="3"/>
+  <circle style="fill:url(#linearGradient5398);fill-opacity:1;stroke-width:2" cx="20" cy="36" r="4"/>
+</svg>

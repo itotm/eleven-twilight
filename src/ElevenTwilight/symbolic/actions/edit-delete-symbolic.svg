@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css" id="current-color-scheme" xmlns="">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style>
+  
+ <defs>
+  
+ </defs>
+ <path d="m6 0c-0.554 0-1 0.446-1 1v1h-4v1h1v12c0 0.554 0.446 1 1 1h9c0.554 0 1-0.446 1-1v-12h1v-1h-4v-1c0-0.554-0.446-1-1-1zm0 1h3v1h-3zm-3 2h9v12h-9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
+ <rect x="5" y="5" width="1" height="8" rx="0" ry="0" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
+ <rect x="7" y="5" width="1" height="8" rx="0" ry="0" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
+ <rect x="9" y="5" width="1" height="8" rx="0" ry="0" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
+</svg>

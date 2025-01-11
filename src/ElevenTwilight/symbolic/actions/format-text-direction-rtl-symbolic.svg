@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<svg height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css" id="current-color-scheme" xmlns="">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style>
+  
+    <g color="#363636" transform="translate(-553 -57)" style="fill:currentColor" class="ColorScheme-Text">
+        <rect height="1" overflow="visible" style="marker:none;fill:currentColor" transform="scale(-1 1)" width="14" x="-568.001" y="58" class="ColorScheme-Text" />
+        <rect height="1" overflow="visible" style="marker:none;fill:currentColor" transform="scale(-1 1)" width="14" x="-568.001" y="61" class="ColorScheme-Text" />
+        <path d="M568.001 67h-10v1h10zM556.001 68v2h10v1h-10v2l-3-2.5z" overflow="visible" style="marker:none;fill:currentColor" class="ColorScheme-Text" />
+        <rect height="1" overflow="visible" style="marker:none;fill:currentColor" transform="scale(-1 1)" width="14" x="-568.001" y="64" class="ColorScheme-Text" />
+        
+    </g>
+</svg>

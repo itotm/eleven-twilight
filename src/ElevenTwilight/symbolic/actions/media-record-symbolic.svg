@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" enable-background="new">
+  <style type="text/css" id="current-color-scheme" xmlns="">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style>
+  
+  <defs>
+    <filter id="a" color-interpolation-filters="sRGB" style="fill:currentColor" class="ColorScheme-Text">
+      <feBlend mode="darken" in2="BackgroundImage" style="fill:currentColor" class="ColorScheme-Text" />
+    </filter>
+  </defs>
+  <path d="M8 3C5.24 3 3 5.24 3 8s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z" style="fill:currentColor" class="ColorScheme-Text" />
+</svg>

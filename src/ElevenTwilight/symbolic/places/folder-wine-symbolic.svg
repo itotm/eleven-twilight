@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css" id="current-color-scheme" xmlns="">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style>
+ <defs>
+  
+ </defs>
+ <g class="ColorScheme-Text" fill="currentColor" style="fill:currentColor">
+  <rect x="2" y="2" width="6" height="6" rx="0" ry="0" style="fill:currentColor" class="ColorScheme-Text" />
+  <rect x="9" y="2" width="6" height="6" rx="0" ry="0" style="fill:currentColor" class="ColorScheme-Text" />
+  <rect x="9" y="9" width="6" height="6" rx="0" ry="0" style="fill:currentColor" class="ColorScheme-Text" />
+  <rect x="2" y="9" width="6" height="6" rx="0" ry="0" style="fill:currentColor" class="ColorScheme-Text" />
+ </g>
+</svg>

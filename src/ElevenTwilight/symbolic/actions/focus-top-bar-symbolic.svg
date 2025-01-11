@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<svg width="16" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css" id="current-color-scheme" xmlns="">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style>
+  
+ <path d="m2 4c-1.108 0-2 0.892-2 2v6h2v-6h12v6h2v-6c0-1.108-0.892-2-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3452" style="fill:currentColor" class="ColorScheme-Text" />
+</svg>

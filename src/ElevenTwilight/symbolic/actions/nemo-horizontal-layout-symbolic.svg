@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<svg width="16" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css" id="current-color-scheme" xmlns="">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style>
+  
+
+ <g style="fill:currentColor" class="ColorScheme-Text">
+  <circle cx="2.9895" cy="8" r="1" style="fill:currentColor" class="ColorScheme-Text" />
+  <circle cx="8" cy="8" r="1" style="fill:currentColor" class="ColorScheme-Text" />
+  <circle cx="13" cy="8" r="1" style="fill:currentColor" class="ColorScheme-Text" />
+ </g>
+</svg>

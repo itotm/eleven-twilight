@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+  <style type="text/css" id="current-color-scheme" xmlns="">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style>
+  
+ <defs>
+  
+ </defs>
+ <path class="ColorScheme-Text" fill="currentColor" d="M 8,1 C 4.134,1 1,4.134 1,8 1,11.866 4.134,15 8,15 11.866,15 15,11.866 15,8 15,4.134 11.866,1 8,1 Z M 4,4 H 6 V 4 4 L 8,7 10,4 H 12 V 12 H 10 V 8 L 8,10 6,8 V 12 H 4 Z" style="fill:currentColor" />
+</svg>

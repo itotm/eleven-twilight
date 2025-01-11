@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<svg width="16" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <style type="text/css" id="current-color-scheme" xmlns="">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style>
+ <metadata>
+  <rdf:RDF style="fill:currentColor" class="ColorScheme-Text">
+   <cc:Work rdf:about="" style="fill:currentColor" class="ColorScheme-Text">
+    <dc:format style="fill:currentColor" class="ColorScheme-Text">image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" style="fill:currentColor" class="ColorScheme-Text" />
+    <dc:title style="fill:currentColor" class="ColorScheme-Text" />
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  
+ </defs>
+ <g stroke-linecap="round" stroke-linejoin="round" style="fill:currentColor" class="ColorScheme-Text">
+  <path d="m10.5 6a3.5 3.5 0 0 0-3.5 3.5 3.5 3.5 0 0 0 3.5 3.5 3.5 3.5 0 0 0 3.5-3.5 3.5 3.5 0 0 0-3.5-3.5zm0 1a2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5 2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5z" stroke-width="1.4" style="fill:currentColor" class="ColorScheme-Text" />
+  <path d="m2 4c-1.108 0-2 0.892-2 2v7c0 1.108 0.892 2 2 2h12c1.108 0 2-0.892 2-2v-7c0-1.108-0.892-2-2-2h-12zm0 1h12c0.554 0 1 0.446 1 1v7c0 0.554-0.446 1-1 1h-12c-0.554 0-1-0.446-1-1v-7c0-0.554 0.446-1 1-1z" style="fill:currentColor" class="ColorScheme-Text" />
+  <rect x="7" y="2" width="6" height="1" rx="0" ry="0" style="fill:currentColor" class="ColorScheme-Text" />
+  <rect x="2" y="6" width="2" height="1" rx="0" ry="0" style="fill:currentColor" class="ColorScheme-Text" />
+ </g>
+</svg>

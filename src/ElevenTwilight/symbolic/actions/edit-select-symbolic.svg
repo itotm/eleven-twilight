@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<svg height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css" id="current-color-scheme" xmlns="">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style>
+  
+    <g transform="translate(-573 -17)" style="fill:currentColor" class="ColorScheme-Text">
+        
+        <path color="#000" d="M573 20v4l4 4v-8zm12 3v8h4v-4z" overflow="visible" style="marker:none;fill:currentColor" class="ColorScheme-Text" />
+    </g>
+</svg>

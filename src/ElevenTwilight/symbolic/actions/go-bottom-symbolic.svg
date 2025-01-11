@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<svg version="1.1" viewBox="0 0 16 16">
+  <style type="text/css" id="current-color-scheme">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style>
+  
+ <defs>
+  
+ </defs>
+ <path class="ColorScheme-Text" d="M 14.3633,3.6367 8,10 1.6367,3.6367 2.34373,2.92967 l 5.6562,5.6562 5.6562,-5.6562 0.70703,0.70703 z" fill="currentColor" style="fill:currentColor" />
+ <circle class="ColorScheme-Text" transform="scale(1,-1)" cx="8" cy="-12" r="1" fill="currentColor" style="fill:currentColor" />
+</svg>

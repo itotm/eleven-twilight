@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<svg width="16" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css" id="current-color-scheme" xmlns="">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style>
+  
+ 
+ <g transform="rotate(90 7.9947 8)" style="fill:currentColor" class="ColorScheme-Text">
+  <circle transform="rotate(90)" cx="8" cy="-2.9895" r="1" style="fill:currentColor" class="ColorScheme-Text" />
+  <circle transform="rotate(90)" cx="8" cy="-8" r="1" style="fill:currentColor" class="ColorScheme-Text" />
+  <circle transform="rotate(90)" cx="8" cy="-13" r="1" style="fill:currentColor" class="ColorScheme-Text" />
+ </g>
+</svg>

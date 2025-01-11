@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16">
+  <style type="text/css" id="current-color-scheme" xmlns="">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style>
+  
+  <g transform="matrix(1 0 0 -1 99.997 -413)" color="#000" style="fill:currentColor" class="ColorScheme-Text">
+    <rect y="-418" x="-92.997" width="2" style="marker:none;fill:currentColor" ry="1" rx="1" height="2" overflow="visible" class="ColorScheme-Text" />
+    <rect y="-422" x="-92.997" width="2" style="marker:none;fill:currentColor" ry="1" rx="1" height="2" overflow="visible" class="ColorScheme-Text" />
+    <rect y="-426" x="-92.997" width="2" style="marker:none;fill:currentColor" ry="1" rx="1" height="2" overflow="visible" class="ColorScheme-Text" />
+  </g>
+</svg>

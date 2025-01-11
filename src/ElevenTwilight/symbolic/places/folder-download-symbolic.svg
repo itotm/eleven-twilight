@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css" id="current-color-scheme" xmlns="">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style>
+  
+ <defs>
+  
+ </defs>
+ <rect x="2" y="14" width="11" height="1" rx="0" ry="0" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2845" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
+ <path d="m7 1v10.088l-3.7441-3.7441-0.70703 0.70703 4.2441 4.2422 0.70703 0.70703 4.9492-4.9492-0.70703-0.70703-3.7422 3.7402v-10.084h-1z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2845" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
+</svg>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" enable-background="new">
+  <style type="text/css" id="current-color-scheme" xmlns="">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style>
+  
+  <defs>
+    <filter id="a" color-interpolation-filters="sRGB" style="fill:currentColor" class="ColorScheme-Text">
+      <feBlend mode="darken" in2="BackgroundImage" style="fill:currentColor" class="ColorScheme-Text" />
+    </filter>
+  </defs>
+  <g transform="rotate(90 -195.002 -280.998)" color="#000" style="fill:currentColor" class="ColorScheme-Text">
+    <rect y="-492" x="91.997" width="4" style="marker:none;fill:currentColor" ry="2" rx="2" height="4" overflow="visible" enable-background="new" class="ColorScheme-Text" />
+    <rect y="-486" x="91.997" width="4" style="marker:none;fill:currentColor" ry="2" rx="2" height="4" overflow="visible" enable-background="new" class="ColorScheme-Text" />
+    <rect y="-480" x="91.997" width="4" style="marker:none;fill:currentColor" ry="2" rx="2" height="4" overflow="visible" enable-background="new" class="ColorScheme-Text" />
+  </g>
+</svg>
