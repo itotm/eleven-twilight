@@ -1,0 +1,30 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build / packaging output
+dist/
+build/
+*.tar.gz
+*.tar.xz
+*.tar.bz2
+*.zip
+
+# Inkscape
+.inkscape-backups/
+*.inkscape-backup
+
+# Python cache (build scripts)
+__pycache__/
+*.py[cod]
+
+# Logs
+*.log
