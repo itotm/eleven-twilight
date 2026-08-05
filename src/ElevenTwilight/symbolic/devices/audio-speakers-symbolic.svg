@@ -1,5 +1,11 @@
 <svg width="16" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg">
- <g enable-background="new" fill="#363636">
+  <style type="text/css" id="current-color-scheme">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style>
+
+ <g enable-background="new" fill="currentColor" class="ColorScheme-Text">
   <rect y="6" width="5" height="4" ry="1" fill-rule="evenodd" style="paint-order:normal"/>
   <path d="m6 3-3 3v4l3 3z"/>
   <g fill-rule="evenodd">

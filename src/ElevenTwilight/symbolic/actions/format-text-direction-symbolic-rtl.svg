@@ -1,4 +1,10 @@
 <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg'>
+  <style type="text/css" id="current-color-scheme">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style>
+
     <g color='#363636' transform='translate(-553 -57)'>
         <rect fill='#363636' height='1' overflow='visible' style='marker:none' transform='scale(-1 1)' width='14' x='-568.001' y='58'/>
         <rect fill='#363636' height='1' overflow='visible' style='marker:none' transform='scale(-1 1)' width='14' x='-568.001' y='61'/>

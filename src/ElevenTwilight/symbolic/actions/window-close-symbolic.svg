@@ -9,9 +9,9 @@
     <g class="ColorScheme-Text" stroke-linecap="square">
         <path
             d="m4 4 8 8m-8 0 8-8"
-            fill="currentColor"/>
+            fill="currentColor" class="ColorScheme-Text"/>
         <path
             d="M 4,3.1523438 3.1523438,4 7.1523437,8 3.1523438,12 4,12.847656 8,8.8476563 12,12.847656 12.847656,12 8.8476563,8 12.847656,4 12,3.1523438 8,7.1523437 Z"
-            fill="currentColor"/>
+            fill="currentColor" class="ColorScheme-Text"/>
     </g>
 </svg>
