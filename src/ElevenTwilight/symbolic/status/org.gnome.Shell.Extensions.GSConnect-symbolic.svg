@@ -1,11 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<svg width="16" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <style type="text/css" id="current-color-scheme" xmlns="">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme" xmlns="">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
- <g transform="matrix(.8 0 0 .8 .2 1.2)" stroke-linecap="square" stroke-width="2.6667" style="paint-order:stroke fill markers;fill:currentColor" aria-label="" class="ColorScheme-Text">
-  <path d="m4.75 12.25v1.25h-2.5v-1.25zm15 1.25h-8.75v1.25h2.5v1.25h-13.75v-11.25h1.25v-3.75h18.75zm-13.75 1.25v-8.75h-5v8.75zm3.75 1e-6v-1.25h-2.5v1.25zm-2.5-2.5h11.25v-10h-16.25v2.5h5z" stroke-width="3.3333" style="fill:currentColor" class="ColorScheme-Text" />
- </g>
+</style></defs>
+ <path class="ColorScheme-Text" style="fill:currentColor" fill="#31363b" d="m 4,11 l 0,1 l -2,0 l 0,-1 z m 12,1 l -7,0 l 0,1 l 2,0 l 0,1 l -11,0 l 0,-9 l 1,0 l 0,-3 l 15,0 z m -11,1 l 0,-7 l -4,0 l 0,7 z m 3,7.99999998691E-07 l 0,-1 l -2,0 l 0,1 z m -2,-2 l 9,0 l 0,-8 l -13,0 l 0,2 l 4,0 z"/>
 </svg>

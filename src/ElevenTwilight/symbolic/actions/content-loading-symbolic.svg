@@ -1,20 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" enable-background="new">
-  <style type="text/css" id="current-color-scheme" xmlns="">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme" xmlns="">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
-  
-  <defs>
-    <filter id="a" color-interpolation-filters="sRGB" style="fill:currentColor" class="ColorScheme-Text">
-      <feBlend mode="darken" in2="BackgroundImage" style="fill:currentColor" class="ColorScheme-Text" />
-    </filter>
-  </defs>
-  <g transform="rotate(90 -195.002 -280.998)" color="#000" style="fill:currentColor" class="ColorScheme-Text">
-    <rect y="-492" x="91.997" width="4" style="marker:none;fill:currentColor" ry="2" rx="2" height="4" overflow="visible" enable-background="new" class="ColorScheme-Text" />
-    <rect y="-486" x="91.997" width="4" style="marker:none;fill:currentColor" ry="2" rx="2" height="4" overflow="visible" enable-background="new" class="ColorScheme-Text" />
-    <rect y="-480" x="91.997" width="4" style="marker:none;fill:currentColor" ry="2" rx="2" height="4" overflow="visible" enable-background="new" class="ColorScheme-Text" />
-  </g>
+</style></defs>
+ <path class="ColorScheme-Text" style="marker:none;fill:currentColor" fill="#31363b" d="M 16,8.001 L 16,8.001 A 2,2 90 0,1 14,10.001 L 14,10.001 A 2,2 90 0,1 12,8.001 L 12,8.001 A 2,2 90 0,1 14,6.001 L 14,6.001 A 2,2 90 0,1 16,8.001 Z"/>
+ <path class="ColorScheme-Text" style="marker:none;fill:currentColor" fill="#31363b" d="M 10,8.001 L 10,8.001 A 2,2 90 0,1 8,10.001 L 8,10.001 A 2,2 90 0,1 6,8.001 L 6,8.001 A 2,2 90 0,1 8,6.001 L 8,6.001 A 2,2 90 0,1 10,8.001 Z"/>
+ <path class="ColorScheme-Text" style="marker:none;fill:currentColor" fill="#31363b" d="M 4,8.001 L 4,8.001 A 2,2 90 0,1 2,10.001 L 2,10.001 A 2,2 90 0,1 0,8.001 L 0,8.001 A 2,2 90 0,1 2,6.001 L 2,6.001 A 2,2 90 0,1 4,8.001 Z"/>
 </svg>

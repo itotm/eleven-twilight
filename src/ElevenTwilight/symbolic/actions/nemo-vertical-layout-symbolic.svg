@@ -1,16 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
-<svg width="16" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <style type="text/css" id="current-color-scheme" xmlns="">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme" xmlns="">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
-  
- 
- <g transform="rotate(90 7.9947 8)" style="fill:currentColor" class="ColorScheme-Text">
-  <circle transform="rotate(90)" cx="8" cy="-2.9895" r="1" style="fill:currentColor" class="ColorScheme-Text" />
-  <circle transform="rotate(90)" cx="8" cy="-8" r="1" style="fill:currentColor" class="ColorScheme-Text" />
-  <circle transform="rotate(90)" cx="8" cy="-13" r="1" style="fill:currentColor" class="ColorScheme-Text" />
- </g>
+</style></defs>
+ <path class="ColorScheme-Text" style="fill:currentColor" fill="#31363b" d="M 6.9947,2.9948 A 1,1 180 0,1 7.9947,1.9948 A 1,1 180 0,1 8.9947,2.9948 A 1,1 180 0,1 7.9947,3.9948 A 1,1 180 0,1 6.9947,2.9948 Z"/>
+ <path class="ColorScheme-Text" style="fill:currentColor" fill="#31363b" d="M 6.9947,8.0053 A 1,1 180 0,1 7.9947,7.0053 A 1,1 180 0,1 8.9947,8.0053 A 1,1 180 0,1 7.9947,9.0053 A 1,1 180 0,1 6.9947,8.0053 Z"/>
+ <path class="ColorScheme-Text" style="fill:currentColor" fill="#31363b" d="M 6.9947,13.0053 A 1,1 180 0,1 7.9947,12.0053 A 1,1 180 0,1 8.9947,13.0053 A 1,1 180 0,1 7.9947,14.0053 A 1,1 180 0,1 6.9947,13.0053 Z"/>
 </svg>

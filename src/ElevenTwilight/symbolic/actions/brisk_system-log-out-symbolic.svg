@@ -1,15 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
-<svg width="16" height="16" enable-background="new" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
-  <style type="text/css" id="current-color-scheme" xmlns="">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme" xmlns="">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
-  
- <g transform="translate(-545 -81)" style="fill:currentColor" class="ColorScheme-Text">
-  <path transform="translate(545 81)" d="m2.9922 1c-1.1033 0-1.9922 0.88889-1.9922 1.9922v10.016c0 1.1033 0.88889 1.9922 1.9922 1.9922h10.016c1.1033 0 1.9922-0.88889 1.9922-1.9922v-10.016c0-1.1033-0.88889-1.9922-1.9922-1.9922h-10.016zm0.0078125 1h10c0.554 0 1 0.446 1 1v10c0 0.554-0.446 1-1 1h-10c-0.554 0-1-0.446-1-1v-10c0-0.554 0.446-1 1-1z" style="fill:currentColor" class="ColorScheme-Text" />
-  <rect transform="rotate(45)" x="450.08" y="-330.22" width="6" height="1" style="fill:currentColor" class="ColorScheme-Text" />
-  <rect transform="matrix(.70711 -.70711 -.70711 -.70711 0 0)" x="324.22" y="-456.08" width="6" height="1" style="fill:currentColor" class="ColorScheme-Text" />
- </g>
+</style></defs>
+ <path class="ColorScheme-Text" style="fill:currentColor" fill="#31363b" d="m 2.9922,1 c -1.1033,0 -1.9922,0.88889 -1.9922,1.9922 l 0,10.016 c 0,1.1033 0.88889,1.9922 1.9922,1.9922 l 10.016,0 c 1.1033,0 1.9922,-0.88889 1.9922,-1.9922 l 0,-10.016 c 0,-1.1033 -0.88889,-1.9922 -1.9922,-1.9922 l -10.016,0 z m 0.0078125,1 l 10,0 c 0.554,0 1,0.446 1,1 l 0,10 c 0,0.554 -0.446,1 -1,1 l -10,0 c -0.554,0 -1,-0.446 -1,-1 l 0,-10 c 0,-0.554 0.446,-1 1,-1 z"/>
+ <path class="ColorScheme-Text" style="fill:currentColor" fill="#31363b" d="M 6.75542135986,3.75381879302 L 10.998062047,7.99645948014 L 10.2909552658,8.70356626133 L 6.04831457868,4.46092557421 Z"/>
+ <path class="ColorScheme-Text" style="fill:currentColor" fill="#31363b" d="M 6.757933,12.2395246 L 11.000593,7.9968646 L 10.293483,7.2897546 L 6.050823,11.5324146 Z"/>
 </svg>

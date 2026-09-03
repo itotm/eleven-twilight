@@ -1,15 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
-<svg width="16" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <style type="text/css" id="current-color-scheme" xmlns="">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme" xmlns="">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
-  
- <path d="m1 5v8c0 1.108 0.892 2 2 2h9c1.108 0 2-0.892 2-2v-8h-1v8c0 0.554-0.446 1-1 1h-9c-0.554 0-1-0.446-1-1v-8h-1z" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".25" stroke-width="1.0016" style="paint-order:markers stroke fill;fill:currentColor" class="ColorScheme-Text" />
- <rect transform="rotate(45)" x="9.5368" y="2.182" width="4.2518" height="1" rx="0" ry="0" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".25" stroke-width="1.0016" style="paint-order:markers stroke fill;fill:currentColor" class="ColorScheme-Text" />
- <rect transform="matrix(-.70711 .70711 .70711 .70711 0 0)" x="-1.0698" y="12.789" width="4.2518" height="1" rx="0" ry="0" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".25" stroke-width="1.0016" style="paint-order:markers stroke fill;fill:currentColor" class="ColorScheme-Text" />
- <rect x="7" y="6" width="1" height="5" rx="0" ry="0" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".25" stroke-width=".79181" style="paint-order:markers stroke fill;fill:currentColor" class="ColorScheme-Text" />
- <path d="m1 1c-0.554 0-1 0.446-1 1v2c0 0.554 0.446 1 1 1h13c0.554 0 1-0.446 1-1v-2c0-0.554-0.446-1-1-1h-13zm0 1h13v2h-13v-2z" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".25" stroke-width="1.0016" style="paint-order:markers stroke fill;fill:currentColor" class="ColorScheme-Text" />
+</style></defs>
+ <path class="ColorScheme-Text" style="paint-order:markers stroke fill;fill:currentColor" fill="#31363b" stroke-opacity=".25" stroke-linecap="round" stroke-linejoin="round" d="m 1,5 l 0,8 c 0,1.108 0.892,2 2,2 l 9,0 c 1.108,0 2,-0.892 2,-2 l 0,-8 l -1,0 l 0,8 c 0,0.554 -0.446,1 -1,1 l -9,0 c -0.554,0 -1,-0.446 -1,-1 l 0,-8 l -1,0 z"/>
+ <path class="ColorScheme-Text" style="paint-order:markers stroke fill;fill:currentColor" fill="#31363b" stroke-opacity=".25" stroke-linecap="round" stroke-linejoin="round" d="M 5.20062895427,8.28644294737 L 8.20710556652,11.2929195596 L 7.49999878533,12.0000263408 L 4.49352217308,8.99354972856 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:markers stroke fill;fill:currentColor" fill="#31363b" stroke-opacity=".25" stroke-linecap="round" stroke-linejoin="round" d="M 9.799696068,8.286763512 L 6.79320577,11.29325381 L 7.50031577,12.00036381 L 10.506806068,8.993873512 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:markers stroke fill;fill:currentColor" fill="#31363b" stroke-opacity=".25" stroke-linecap="round" stroke-linejoin="round" d="M 7,6 L 8,6 L 8,11 L 7,11 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:markers stroke fill;fill:currentColor" fill="#31363b" stroke-opacity=".25" stroke-linecap="round" stroke-linejoin="round" d="m 1,1 c -0.554,0 -1,0.446 -1,1 l 0,2 c 0,0.554 0.446,1 1,1 l 13,0 c 0.554,0 1,-0.446 1,-1 l 0,-2 c 0,-0.554 -0.446,-1 -1,-1 l -13,0 z m 0,1 l 13,0 l 0,2 l -13,0 l 0,-2 z"/>
 </svg>

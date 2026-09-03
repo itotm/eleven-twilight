@@ -1,15 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
-<svg width="16" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <style type="text/css" id="current-color-scheme" xmlns="">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme" xmlns="">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
-  
- <defs>
-  
- </defs>
- <rect transform="rotate(-60)" x="-10.941" y="8.4152" width="14" height="1" rx=".5" ry=".5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
- <rect x="7" y="13" width="7" height="1" rx=".5" ry=".5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
+</style></defs>
+ <path class="ColorScheme-Text" style="paint-order:stroke fill markers;fill:currentColor" fill="#31363b" stroke-linecap="round" stroke-linejoin="round" d="M 2.06727697793,13.2497712409 L 8.56727697793,1.99144099172 A 0.5,0.5 -60 0,1 9.25028967982,1.80842828982 L 9.25028967982,1.80842828982 A 0.5,0.5 -60 0,1 9.43330238171,2.49144099172 L 2.93330238171,13.7497712409 A 0.5,0.5 -60 0,1 2.25028967982,13.9327839428 L 2.25028967982,13.9327839428 A 0.5,0.5 -60 0,1 2.06727697793,13.2497712409 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:stroke fill markers;fill:currentColor" fill="#31363b" stroke-linecap="round" stroke-linejoin="round" d="M 7.5,13 L 13.5,13 A 0.5,0.5 0 0,1 14,13.5 L 14,13.5 A 0.5,0.5 0 0,1 13.5,14 L 7.5,14 A 0.5,0.5 0 0,1 7,13.5 L 7,13.5 A 0.5,0.5 0 0,1 7.5,13 Z"/>
 </svg>

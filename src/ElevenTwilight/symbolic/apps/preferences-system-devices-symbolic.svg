@@ -1,16 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-  <style type="text/css" id="current-color-scheme" xmlns="">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme" xmlns="">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
-  <defs>
-    <filter id="a" color-interpolation-filters="sRGB" style="fill:currentColor" class="ColorScheme-Text">
-      <feBlend mode="darken" in2="BackgroundImage" style="fill:currentColor" class="ColorScheme-Text" />
-    </filter>
-  </defs>
-  <path style="marker:none;fill:currentColor" d="M3 2v4H2C1 6 1 7 1 7v5h2v2h3v-1H4v-1h2V6H4V3h7v2h1V2zm0 6h1v1H3z" color="#000" overflow="visible" filter="url(#a)" enable-background="accumulate" class="ColorScheme-Text" />
-  <path d="M8.002 6A.999.999 0 0 0 7 7v4c0 .554.447 1 1.002 1H14a.999.999 0 0 0 1.002-1V7c0-.554-.447-1-1.002-1zM8 7h6.002v4H8z" paint-order="markers stroke fill" style="fill:currentColor" class="ColorScheme-Text" />
-  <rect width="4" height="1" x="9" y="13" rx="0" ry="0" paint-order="markers stroke fill" style="fill:currentColor" class="ColorScheme-Text" />
+</style></defs>
+ <path class="ColorScheme-Text" style="marker:none;fill:currentColor" fill="#31363b" d="M 3,2 l 0,4 L 2,6 C 1,6 1,7 1,7 l 0,5 l 2,0 l 0,2 l 3,0 l 0,-1 L 4,13 l 0,-1 l 2,0 L 6,6 L 4,6 L 4,3 l 7,0 l 0,2 l 1,0 L 12,2 z m 0,6 l 1,0 l 0,1 L 3,9 z"/>
+ <path class="ColorScheme-Text" style="fill:currentColor" fill="#31363b" d="M 8.002,6 A 0.999,0.999 0 0,0 7,7 l 0,4 c 0,0.554 0.447,1 1.002,1 L 14,12 a 0.999,0.999 0 0,0 1.002,-1 L 15.002,7 c 0,-0.554 -0.447,-1 -1.002,-1 z M 8,7 l 6.002,0 l 0,4 L 8,11 z"/>
+ <path class="ColorScheme-Text" style="fill:currentColor" fill="#31363b" d="M 9,13 L 13,13 L 13,14 L 9,14 Z"/>
 </svg>

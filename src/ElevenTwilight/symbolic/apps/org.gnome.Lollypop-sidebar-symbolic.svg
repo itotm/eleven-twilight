@@ -1,15 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<svg width="16" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <style type="text/css" id="current-color-scheme" xmlns="">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme" xmlns="">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
- <title style="fill:currentColor" class="ColorScheme-Text">Gnome Symbolic Icon Theme</title>
- <g transform="translate(100 72.989)" style="fill:currentColor" class="ColorScheme-Text">
-  <g transform="rotate(90 -82 -75.001)" style="fill:currentColor" class="ColorScheme-Text">
-   <rect x="-78" y="-63" width="12" height="1" color-rendering="auto" image-rendering="auto" shape-rendering="auto" style="isolation:auto;mix-blend-mode:normal;paint-order:normal;fill:currentColor" class="ColorScheme-Text" />
-   <path transform="translate(-80,-72.989)" d="m3 0.98828c-1.108 0-2 0.892-2 2v10c0 1.108 0.892 2 2 2h10c1.108 0 2-0.892 2-2v-10c0-1.108-0.892-2-2-2zm0 1h10c0.554 0 1 0.446 1 1v10c0 0.554-0.446 1-1 1h-10c-0.554 0-1-0.446-1-1v-10c0-0.554 0.446-1 1-1z" style="fill:currentColor" class="ColorScheme-Text" />
-  </g>
- </g>
+</style></defs>
+ <path class="ColorScheme-Text" style="isolation:auto;mix-blend-mode:normal;paint-order:normal;fill:currentColor" fill="#31363b" d="M 5.999,1.988 L 5.999,13.988 L 4.999,13.988 L 4.999,1.988 Z"/>
+ <path class="ColorScheme-Text" style="fill:currentColor" fill="#31363b" d="m 14.99972,2.988 c 0,-1.108 -0.892,-2 -2,-2 l -10,6.66133814775E-16 c -1.108,0 -2,0.892 -2,2 l 0,10 c 0,1.108 0.892,2 2,2 l 10,0 c 1.108,0 2,-0.892 2,-2 z m -1,0 l 0,10 c 0,0.554 -0.446,1 -1,1 l -10,0 c -0.554,0 -1,-0.446 -1,-1 l 0,-10 c 0,-0.554 0.446,-1 1,-1 l 10,-8.881784197E-16 c 0.554,0 1,0.446 1,1 z"/>
 </svg>

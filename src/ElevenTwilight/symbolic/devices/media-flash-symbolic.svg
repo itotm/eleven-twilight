@@ -1,11 +1,8 @@
-<svg width="16" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <style type="text/css" id="current-color-scheme">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
-
-    <g color='#000' transform='translate(-1293 -61)'>
-        <path d='M1296 63.003v11c0 .834.564 1.526 1.053 1.77.488.244.947.23.947.23h7s.459.014.947-.23c.489-.244 1.053-.936 1.053-1.77v-8.445l-.324-.324-1.906-1.906-.325-.325H1304zm1 1h1v2h1v-2h1v2h1v-2h1v2h1v-2h1.031l.031.032 1.906 1.906.031.031v8.031c0 1-1 1-1 1h-7s-1 0-1-1z' fill='#363636' font-family='sans-serif' font-weight='400' overflow='visible' style='line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;text-orientation:mixed;shape-padding:0;isolation:auto;mix-blend-mode:normal' white-space='normal'/>
-    </g>
+</style></defs>
+ <path style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;text-orientation:mixed;shape-padding:0;isolation:auto;mix-blend-mode:normal" fill="#363636" d="M 3,2.003 l 0,11 c 0,0.834 0.564,1.526 1.053,1.77 c 0.488,0.244 0.947,0.23 0.947,0.23 l 7,0 s 0.459,0.014 0.947,-0.23 c 0.489,-0.244 1.053,-0.936 1.053,-1.77 l 0,-8.445 l -0.324,-0.324 l -1.906,-1.906 l -0.325,-0.325 L 11,2.003 z m 1,1 l 1,0 l 0,2 l 1,0 l 0,-2 l 1,0 l 0,2 l 1,0 l 0,-2 l 1,0 l 0,2 l 1,0 l 0,-2 l 1.031,0 l 0.0309999999999,0.032 l 1.906,1.906 l 0.0309999999999,0.031 l 0,8.031 c 0,1 -1,1 -1,1 l -7,0 s -1,0 -1,-1 z"/>
 </svg>

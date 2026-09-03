@@ -1,17 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" enable-background="new">
-  <style type="text/css" id="current-color-scheme" xmlns="">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme" xmlns="">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
-  
-  <defs>
-    <filter id="a" color-interpolation-filters="sRGB" style="fill:currentColor" class="ColorScheme-Text">
-      <feBlend mode="darken" in2="BackgroundImage" style="fill:currentColor" class="ColorScheme-Text" />
-    </filter>
-  </defs>
-  <path style="isolation:auto;mix-blend-mode:normal;marker:none;fill:currentColor" d="M2.498 3.053c-.831 0-1.5.669-1.5 1.5v7c0 .83.669 1.5 1.5 1.5H7v-1H2.498a.499.499 0 0 1-.5-.5V4.566L7 8.416V7.4c0-.084.02-.148.03-.222L2.972 4.053H13.02L10.494 6h1.64l1.864-1.436V6h1V4.553c0-.831-.669-1.5-1.5-1.5z" overflow="visible" color="#000" class="ColorScheme-Text" />
-  <path class="warning ColorScheme-Text" d="M9 15.007c-1 0-1-1-1-1v-6c0-1 1-1 1-1h6s1 0 1 1v6s0 1-1 1zm2-1h2v-4h-2zm0-5h2v-1h-2z" style="marker:none;fill:currentColor" color="#363636" overflow="visible" />
+</style></defs>
+ <path class="ColorScheme-Text" style="isolation:auto;mix-blend-mode:normal;marker:none;fill:currentColor" fill="#31363b" d="M 2.498,3.053 c -0.831,0 -1.5,0.669 -1.5,1.5 l 0,7 c 0,0.83 0.669,1.5 1.5,1.5 L 7,13.053 l 0,-1 L 2.498,12.053 a 0.499,0.499 0 0,1 -0.5,-0.5 L 1.998,4.566 L 7,8.416 L 7,7.4 c 0,-0.084 0.02,-0.148 0.03,-0.222 L 2.972,4.053 L 13.02,4.053 L 10.494,6 l 1.64,0 l 1.864,-1.436 L 13.998,6 l 1,0 L 14.998,4.553 c 0,-0.831 -0.669,-1.5 -1.5,-1.5 z"/>
+ <path class="warning ColorScheme-Text" style="marker:none;fill:currentColor" fill="#31363b" d="M 9,15.007 c -1,0 -1,-1 -1,-1 l 0,-6 c 0,-1 1,-1 1,-1 l 6,0 s 1,0 1,1 l 0,6 s 0,1 -1,1 z m 2,-1 l 2,0 l 0,-4 l -2,0 z m 0,-5 l 2,0 l 0,-1 l -2,0 z"/>
 </svg>

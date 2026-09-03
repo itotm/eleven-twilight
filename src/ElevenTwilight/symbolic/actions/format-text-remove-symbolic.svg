@@ -1,14 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
-<svg width="16" height="16" enable-background="new" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
-  <style type="text/css" id="current-color-scheme" xmlns="">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme" xmlns="">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
-  
- <g transform="translate(-397 -201)" style="fill:currentColor" class="ColorScheme-Text">
-  <path transform="translate(397 201)" d="m4 3v1h5.8809l0.88867-0.88867c-0.24703-0.065406-0.50137-0.11133-0.76953-0.11133h-6zm8.8906 2.2324-0.89062 0.89062v0.87695h-0.87695l-1 1h1.877v4h-5.8789l-0.88867 0.88867c0.24649 0.065096 0.50007 0.11133 0.76758 0.11133h6 1v-1-4-1-1c0-0.2673-0.044374-0.52126-0.10938-0.76758zm-6.8906 1.7676c-1.662 0-3 1.338-3 3 0 0.2675 0.046232 0.52109 0.11133 0.76758l0.90234-0.90234c0.067063-0.99809 0.85347-1.7845 1.8516-1.8516l1.0137-1.0137h-0.87891z" opacity=".35" style="fill:currentColor" class="ColorScheme-Text" />
-  <rect transform="rotate(-45)" x="130.59" y="433.66" width="16" height="1" opacity=".35" style="fill:currentColor" class="ColorScheme-Text" />
- </g>
+</style></defs>
+ <path class="ColorScheme-Text" style="fill:currentColor" fill="#31363b" opacity=".35" d="m 4,3 l 0,1 l 5.8809,0 l 0.88867,-0.88867 c -0.24703,-0.065406 -0.50137,-0.11133 -0.76953,-0.11133 l -6,0 z m 8.8906,2.2324 l -0.89062,0.89062 l 0,0.87695 l -0.87695,0 l -1,1 l 1.877,0 l 0,4 l -5.8789,0 l -0.88867,0.88867 c 0.24649,0.065096 0.50007,0.11133 0.76758,0.11133 l 6,0 l 1,0 l 0,-1 l 0,-4 l 0,-1 l 0,-1 c 0,-0.2673 -0.044374,-0.52126 -0.10938,-0.76758 z m -6.8906,1.7676 c -1.662,0 -3,1.338 -3,3 c 0,0.2675 0.046232,0.52109 0.11133,0.76758 l 0.90234,-0.90234 c 0.067063,-0.99809 0.85347,-1.7845 1.8516,-1.8516 l 1.0137,-1.0137 l -0.87891,0 z"/>
+ <path class="ColorScheme-Text" style="fill:currentColor" fill="#31363b" opacity=".35" d="M 1.98500128451,13.3028521742 L 13.2987097835,1.98914367522 L 14.0058165647,2.69625045641 L 2.6921080657,14.0099589554 Z"/>
 </svg>

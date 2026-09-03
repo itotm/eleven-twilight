@@ -1,15 +1,14 @@
-<svg width="16px" height="16px" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-  <style type="text/css" id="current-color-scheme">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
-
- <rect x="1" y="7" width="14" height="1" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width=".9993" style="paint-order:fill markers stroke" class="ColorScheme-Text"/>
- <path d="m5 1c-1.662 0-3 1.338-3 3v4h1v-4c0-1.108 0.892-2 2-2h6c1.108 0 2 0.892 2 2v4h1v-4c0-1.662-1.338-3-3-3z" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" style="paint-order:fill markers stroke" class="ColorScheme-Text"/>
- <path d="m0 14h6l1 1h-7z" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width=".66144" style="paint-order:fill markers stroke" class="ColorScheme-Text"/>
- <rect x="7.5" y="9" width="1" height="4" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" style="paint-order:fill markers stroke" class="ColorScheme-Text"/>
- <rect transform="rotate(-45)" x="-4.2426" y="14.556" width="3" height="1" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" style="paint-order:fill markers stroke" class="ColorScheme-Text"/>
- <rect transform="matrix(-.70711 -.70711 -.70711 .70711 0 0)" x="-15.556" y="3.2426" width="3" height="1" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" style="paint-order:fill markers stroke" class="ColorScheme-Text"/>
- <path d="m16 14h-6l-1 1h7z" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width=".66144" style="paint-order:fill markers stroke" class="ColorScheme-Text"/>
+</style></defs>
+ <path class="ColorScheme-Text" style="paint-order:fill markers stroke" fill="#31363b" stroke-linecap="round" stroke-linejoin="round" d="M 1,7 L 15,7 L 15,8 L 1,8 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:fill markers stroke" fill="#31363b" stroke-linecap="round" stroke-linejoin="round" d="m 5,1 c -1.662,0 -3,1.338 -3,3 l 0,4 l 1,0 l 0,-4 c 0,-1.108 0.892,-2 2,-2 l 6,0 c 1.108,0 2,0.892 2,2 l 0,4 l 1,0 l 0,-4 c 0,-1.662 -1.338,-3 -3,-3 z"/>
+ <path class="ColorScheme-Text" style="paint-order:fill markers stroke" fill="#31363b" stroke-linecap="round" stroke-linejoin="round" d="m 0,14 l 6,0 l 1,1 l -7,0 z"/>
+ <path class="ColorScheme-Text" style="paint-order:fill markers stroke" fill="#31363b" stroke-linecap="round" stroke-linejoin="round" d="M 7.5,9 L 8.5,9 L 8.5,13 L 7.5,13 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:fill markers stroke" fill="#31363b" stroke-linecap="round" stroke-linejoin="round" d="M 7.29267507709,13.2926175368 L 9.41399542065,11.1712971933 L 10.1211022018,11.8784039744 L 7.99978185828,13.999724318 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:fill markers stroke" fill="#31363b" stroke-linecap="round" stroke-linejoin="round" d="M 8.706928274,13.292678046 L 6.585598274,11.171348046 L 5.878488274,11.878458046 L 7.999818274,13.999788046 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:fill markers stroke" fill="#31363b" stroke-linecap="round" stroke-linejoin="round" d="m 16,14 l -6,0 l -1,1 l 7,0 z"/>
 </svg>

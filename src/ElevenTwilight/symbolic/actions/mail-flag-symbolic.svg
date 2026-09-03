@@ -1,19 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
-<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" enable-background="new">
-  <style type="text/css" id="current-color-scheme" xmlns="">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme" xmlns="">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
-  
-  <defs>
-    <filter id="a" color-interpolation-filters="sRGB" style="fill:currentColor" class="ColorScheme-Text">
-      <feBlend in2="BackgroundImage" mode="darken" style="fill:currentColor" class="ColorScheme-Text" />
-    </filter>
-  </defs>
-  <g transform="translate(-302 -150)" style="fill:currentColor" class="ColorScheme-Text">
-    <rect height="15" ry="0" style="marker:none;fill:currentColor" width="1" x="305" y="151" color="#000" overflow="visible" enable-background="accumulate" class="ColorScheme-Text" />
-    <path d="M314.656 150.844c-2.824-.28-3.593 4.406-7.656 1.156v8c5 4 5-4 10 0v-8c-.937-.75-1.692-1.092-2.344-1.156zm-.468 1.031c.39-.062.96.095 1.812.688v5.687c-.747-.32-1.475-.479-2.125-.375-1.11.178-1.875.844-2.5 1.344-.625.5-1.11.834-1.562.906-.39.062-.961-.095-1.813-.688v-5.687c.748.32 1.475.479 2.125.375 1.11-.178 1.875-.844 2.5-1.344.625-.5 1.11-.834 1.563-.906z" style="marker:none;fill:currentColor" color="#000" overflow="visible" enable-background="accumulate" class="ColorScheme-Text" />
-  </g>
+</style></defs>
+ <path class="ColorScheme-Text" style="marker:none;fill:currentColor" fill="#31363b" d="M 3,1 L 4,1 L 4,16 L 3,16 Z"/>
+ <path class="ColorScheme-Text" style="marker:none;fill:currentColor" fill="#31363b" d="M 12.656,0.844 c -2.824,-0.28 -3.593,4.406 -7.656,1.156 l 0,8 c 5,4 5,-4 10,0 l 0,-8 c -0.937,-0.75 -1.692,-1.092 -2.344,-1.156 z m -0.468,1.031 c 0.39,-0.062 0.96,0.095 1.812,0.688 l 0,5.687 c -0.747,-0.32 -1.475,-0.479 -2.125,-0.375 c -1.11,0.178 -1.875,0.844 -2.5,1.344 c -0.625,0.5 -1.11,0.834 -1.562,0.906 c -0.39,0.062 -0.961,-0.095 -1.813,-0.688 l 0,-5.687 c 0.748,0.32 1.475,0.479 2.125,0.375 c 1.11,-0.178 1.875,-0.844 2.5,-1.344 c 0.625,-0.5 1.11,-0.834 1.563,-0.906 z"/>
 </svg>

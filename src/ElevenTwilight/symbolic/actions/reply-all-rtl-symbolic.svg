@@ -1,19 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" enable-background="new">
-  <style type="text/css" id="current-color-scheme" xmlns="">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme" xmlns="">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
-  
-  <defs>
-    <filter id="a" color-interpolation-filters="sRGB" style="fill:currentColor" class="ColorScheme-Text">
-      <feBlend mode="darken" in2="BackgroundImage" style="fill:currentColor" class="ColorScheme-Text" />
-    </filter>
-  </defs>
-  <g color="#363636" font-weight="400" font-family="Sans" style="fill:currentColor" class="ColorScheme-Text">
-    <path style="line-height:normal;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;block-progression:tb;marker:none;fill:currentColor" d="M9.5 1.5L15.97 6 9.5 10.5V9.457L14.47 6 9.5 2.543z" overflow="visible" enable-background="accumulate" class="ColorScheme-Text" />
-    <path style="line-height:normal;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;block-progression:tb;marker:none;fill:currentColor" d="M6 1.503v2.5H5c-3 0-5 2.127-5 5.25 0 3.25 4 4.75 4 4.75s-1.875-2.652-1.438-4c.366-1.126 1.573-2 2.938-2H6v2.5l6.469-4.5L6 1.503zM7 3.41l3.75 2.593L7 8.597V7.003H5.5c-1.791 0-3.356 1.091-3.875 2.688-.15.46-.09.866-.031 1.281C1.243 10.474 1 9.925 1 9.253c0-1.348.414-2.377 1.094-3.093.68-.717 1.642-1.157 2.906-1.157h2V3.41z" overflow="visible" enable-background="accumulate" class="ColorScheme-Text" />
-  </g>
+</style></defs>
+ <path class="ColorScheme-Text" style="line-height:normal;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;block-progression:tb;marker:none;fill:currentColor" fill="#31363b" d="M 9.5,1.5 L 15.97,6 L 9.5,10.5 L 9.5,9.457 L 14.47,6 L 9.5,2.543 z"/>
+ <path class="ColorScheme-Text" style="line-height:normal;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;block-progression:tb;marker:none;fill:currentColor" fill="#31363b" d="M 6,1.503 l 0,2.5 L 5,4.003 c -3,0 -5,2.127 -5,5.25 c 0,3.25 4,4.75 4,4.75 s -1.875,-2.652 -1.438,-4 c 0.366,-1.126 1.573,-2 2.938,-2 L 6,8.003 l 0,2.5 l 6.469,-4.5 L 6,1.503 z M 7,3.41 l 3.75,2.593 L 7,8.597 L 7,7.003 L 5.5,7.003 c -1.791,0 -3.356,1.091 -3.875,2.688 c -0.15,0.46 -0.09,0.866 -0.031,1.281 C 1.243,10.474 1,9.925 1,9.253 c 0,-1.348 0.414,-2.377 1.094,-3.093 c 0.68,-0.717 1.642,-1.157 2.906,-1.157 l 2,0 L 7,3.41 z"/>
 </svg>

@@ -1,15 +1,11 @@
-<svg height='16' width='16' xmlns='http://www.w3.org/2000/svg'>
-  <style type="text/css" id="current-color-scheme">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
-
-    <g color='#363636' transform='translate(-553 -57)'>
-        <rect fill='#363636' height='1' overflow='visible' style='marker:none' transform='scale(-1 1)' width='14' x='-568.001' y='58'/>
-        <rect fill='#363636' height='1' overflow='visible' style='marker:none' transform='scale(-1 1)' width='14' x='-568.001' y='61'/>
-        <path d='M568.001 67h-10v1h10zM556.001 68v2h10v1h-10v2l-3-2.5z' fill='#363636' overflow='visible' style='marker:none'/>
-        <rect fill='#363636' height='1' overflow='visible' style='marker:none' transform='scale(-1 1)' width='14' x='-568.001' y='64'/>
-        
-    </g>
+</style></defs>
+ <path style="marker:none" fill="#363636" d="M 15.001,1 L 1.001,1 L 1.001,2 L 15.001,2 Z"/>
+ <path style="marker:none" fill="#363636" d="M 15.001,4 L 1.001,4 L 1.001,5 L 15.001,5 Z"/>
+ <path style="marker:none" fill="#363636" d="M 15.001,10 l -10,0 l 0,1 l 10,0 z M 3.001,11 l 0,2 l 10,0 l 0,1 l -10,0 l 0,2 l -3,-2.5 z"/>
+ <path style="marker:none" fill="#363636" d="M 15.001,7 L 1.001,7 L 1.001,8 L 15.001,8 Z"/>
 </svg>

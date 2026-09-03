@@ -1,12 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<svg height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-  <style type="text/css" id="current-color-scheme" xmlns="">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme" xmlns="">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
-    <g transform="translate(-893 251)" style="fill:currentColor" class="ColorScheme-Text">
-        
-        <path class="success ColorScheme-Text" color="#000" d="M901-250a7 7 0 1 0 0 14 7 7 0 0 0 0-14zm3.48 3.783c.912-.026 1.381 1.081.727 1.717L900-239.293l-2.907-2.907c-.982-.942.472-2.396 1.414-1.414l1.493 1.493 3.793-3.793a1 1 0 0 1 .688-.303z" overflow="visible" style="marker:none;fill:currentColor" />
-    </g>
+</style></defs>
+ <path class="success ColorScheme-Text" style="marker:none;fill:currentColor" fill="#31363b" d="M 8,1 a 7,7 0 0,0 0,14 a 7,7 0 0,0 0,-14 z m 3.48,3.783 c 0.912,-0.026 1.381,1.081 0.727,1.717 L 7,11.707 l -2.907,-2.907 c -0.982,-0.942 0.472,-2.396 1.414,-1.414 l 1.493,1.493 l 3.793,-3.793 a 1,1 0 0,1 0.688,-0.303 z"/>
 </svg>

@@ -1,18 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<svg width="16.011" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <style type="text/css" id="current-color-scheme" xmlns="">
+<svg width="16.011" height="16" viewBox="0 0 16.011 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme" xmlns="">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
- <path d="m8 1a8 8 0 0 0-8 8 8 8 0 0 0 3.3496 6.5098l0.58203-0.81445a7 7 0 0 1-2.9316-5.6953 7 7 0 0 1 6.9062-7 7 7 0 0 1 0.09375 0 7 7 0 0 1 7 7 7 7 0 0 1-2.9316 5.6973l0.58008 0.8125a8 8 0 0 0 3.3516-6.5098 8 8 0 0 0-8-8z" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
- <circle cx="8" cy="9" r="1" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
- <rect x="7.5055" y="1.5261" width="1" height="1.4739" rx="0" ry="0" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
- <rect transform="rotate(45)" x="11.525" y="-6.7707" width="1" height="1.4739" rx="0" ry="0" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
- <rect transform="rotate(45)" x="11.525" y="6.7032" width="1" height="1.4739" rx="0" ry="0" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
- <rect transform="rotate(90)" x="8.5" y="-15.479" width="1" height="1.4739" rx="0" ry="0" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
- <rect transform="rotate(90)" x="8.5" y="-2.0055" width="1" height="1.4739" rx="0" ry="0" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
- <rect transform="rotate(135)" x=".20322" y="-19.499" width="1" height="1.4739" rx="0" ry="0" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
- <rect transform="rotate(135)" x=".20322" y="-6.0247" width="1" height="1.4739" rx="0" ry="0" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
- <rect transform="rotate(135)" x=".20322" y="-17.025" width="1" height="5" rx=".5" ry=".5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="paint-order:stroke fill markers;fill:currentColor" class="ColorScheme-Text" />
+</style></defs>
+ <path class="ColorScheme-Text" style="paint-order:stroke fill markers;fill:currentColor" fill="#31363b" d="m 8,1 a 8,8 0 0,0 -8,8 a 8,8 0 0,0 3.3496,6.5098 l 0.58203,-0.81445 a 7,7 0 0,1 -2.9316,-5.6953 a 7,7 0 0,1 6.9062,-7 a 7,7 0 0,1 0.09375,0 a 7,7 0 0,1 7,7 a 7,7 0 0,1 -2.9316,5.6973 l 0.58008,0.8125 a 8,8 0 0,0 3.3516,-6.5098 a 8,8 0 0,0 -8,-8 z"/>
+ <path class="ColorScheme-Text" style="paint-order:stroke fill markers;fill:currentColor" fill="#31363b" d="M 9,9 A 1,1 0 0,1 8,10 A 1,1 0 0,1 7,9 A 1,1 0 0,1 8,8 A 1,1 0 0,1 9,9 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:stroke fill markers;fill:currentColor" fill="#31363b" d="M 7.5055,1.5261 L 8.5055,1.5261 L 8.5055,3 L 7.5055,3 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:stroke fill markers;fill:currentColor" fill="#31363b" d="M 12.9370135366,3.3617977698 L 13.6441203177,4.06890455098 L 12.601915633,5.11110923577 L 11.8948088518,4.40400245459 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:stroke fill markers;fill:currentColor" fill="#31363b" d="M 3.40952747753,12.8892838288 L 4.11663425871,13.59639061 L 3.07442957392,14.6385952948 L 2.36732279273,13.9314885136 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:stroke fill markers;fill:currentColor" fill="#31363b" d="M 15.479,8.5 L 15.479,9.5 L 14.0051,9.5 L 14.0051,8.5 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:stroke fill markers;fill:currentColor" fill="#31363b" d="M 2.0055,8.5 L 2.0055,9.5 L 0.5316,9.5 L 0.5316,8.5 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:stroke fill markers;fill:currentColor" fill="#31363b" d="M 13.6441768863,13.9315733664 L 12.9370701051,14.6386801476 L 11.8948654203,13.5964754628 L 12.6019722015,12.8893686816 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:stroke fill markers;fill:currentColor" fill="#31363b" d="M 4.11640798454,4.40380446469 L 3.40930120336,5.11091124587 L 2.36709651856,4.06870656108 L 3.07420329975,3.3615997799 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:stroke fill markers;fill:currentColor" fill="#31363b" stroke-linecap="round" stroke-linejoin="round" d="M 11.541241319,12.5357445804 L 11.541241319,12.5357445804 A 0.5,0.5 135 0,1 10.8341345378,12.5357445804 L 8.0057074131,9.70731745562 A 0.5,0.5 135 0,1 8.0057074131,9.00021067443 L 8.0057074131,9.00021067443 A 0.5,0.5 135 0,1 8.71281419429,9.00021067443 L 11.541241319,11.8286377992 A 0.5,0.5 135 0,1 11.541241319,12.5357445804 Z"/>
 </svg>

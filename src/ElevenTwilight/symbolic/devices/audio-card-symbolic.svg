@@ -1,12 +1,9 @@
-<svg height='16.007' width='16.01' xmlns='http://www.w3.org/2000/svg'>
-  <style type="text/css" id="current-color-scheme">
+<svg width="16.01" height="16.007" viewBox="0 0 16.01 16.007" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
-
-    <g transform='translate(-1113 -60.993)'>
-        <path color='#000' d='M1127 61a1 1 0 0 0-1 1v1h-11.49c-.822 0-1.5.678-1.5 1.5v8.994c0 .823.678 1.5 1.5 1.5H1126V77h1v-4h2l.01-7.003-2.005.003v-3.5s0-.5.5-.5h1.5v-1zm-12.49 3H1126v9.994h-11.49a.488.488 0 0 1-.5-.5V64.5c0-.286.214-.5.5-.5zm12.5 2.994h1v1h-1zm0 2h1v1h-1zm0 2h1v1h-1z' fill='#363636' font-family='sans-serif' font-weight='400' overflow='visible' style='line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;text-orientation:mixed;shape-padding:0;isolation:auto;mix-blend-mode:normal' white-space='normal'/>
-        <path color='#bebebe' d='M1122.723 64.98a.385.385 0 0 0-.178.01l-4.09 1.124c-.252.069-.455.348-.455.625V71a2.237 2.237 0 0 0-.869.04c-.803.196-1.288.774-1.084 1.29.203.517 1.019.777 1.822.58.685-.168 1.155-.62 1.13-1.086V67.81l3-.823V70a2.237 2.237 0 0 0-.87.04c-.803.196-1.288.774-1.084 1.29.203.517 1.019.777 1.822.58.666-.164 1.132-.597 1.13-1.053v-5.492c0-.207-.115-.354-.278-.384z' fill='#363636' overflow='visible' style='marker:none'/>
-    </g>
+</style></defs>
+ <path style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;text-orientation:mixed;shape-padding:0;isolation:auto;mix-blend-mode:normal" fill="#363636" d="M 14,0.007 a 1,1 0 0,0 -1,1 l 0,1 l -11.49,0 c -0.822,0 -1.5,0.678 -1.5,1.5 l 0,8.994 c 0,0.823 0.678,1.5 1.5,1.5 L 13,14.001 L 13,16.007 l 1,0 l 0,-4 l 2,0 l 0.00999999999999,-7.003 l -2.005,0.003 l 0,-3.5 s 0,-0.5 0.5,-0.5 l 1.5,0 l 0,-1 z m -12.49,3 L 13,3.007 l 0,9.994 l -11.49,0 a 0.488,0.488 0 0,1 -0.5,-0.5 L 1.01,3.507 c 0,-0.286 0.214,-0.5 0.5,-0.5 z m 12.5,2.994 l 1,0 l 0,1 l -1,0 z m 0,2 l 1,0 l 0,1 l -1,0 z m 0,2 l 1,0 l 0,1 l -1,0 z"/>
+ <path style="marker:none" fill="#363636" d="M 9.723,3.987 a 0.385,0.385 0 0,0 -0.178,0.01 l -4.09,1.124 c -0.252,0.069 -0.455,0.348 -0.455,0.625 L 5,10.007 a 2.237,2.237 0 0,0 -0.869,0.04 c -0.803,0.196 -1.288,0.774 -1.084,1.29 c 0.203,0.517 1.019,0.777 1.822,0.58 c 0.685,-0.168 1.155,-0.62 1.13,-1.086 L 5.999,6.817 l 3,-0.823 L 8.999,9.007 a 2.237,2.237 0 0,0 -0.87,0.04 c -0.803,0.196 -1.288,0.774 -1.084,1.29 c 0.203,0.517 1.019,0.777 1.822,0.58 c 0.666,-0.164 1.132,-0.597 1.13,-1.053 l 0,-5.492 c 0,-0.207 -0.115,-0.354 -0.278,-0.384 z"/>
 </svg>

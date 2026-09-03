@@ -1,18 +1,13 @@
-<svg width="16" height="16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
-  <style type="text/css" id="current-color-scheme">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme">
       .ColorScheme-Text {
         color:#31363b;
       }
-</style>
-
- <g transform="translate(-41 -867)">
-  <g transform="matrix(-1 0 0 1 98.001 0)" fill="currentColor" class="ColorScheme-Text">
-   <path d="m44.5 870a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5zm0 1a0.5 0.5 0 0 1 0.5 0.5 0.5 0.5 0 0 1-0.5 0.5 0.5 0.5 0 0 1-0.5-0.5 0.5 0.5 0 0 1 0.5-0.5z"/>
-   <rect x="47" y="871" width="8" height="1" ry="0"/>
-   <path d="m44.5 874a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5zm0 1a0.5 0.5 0 0 1 0.5 0.5 0.5 0.5 0 0 1-0.5 0.5 0.5 0.5 0 0 1-0.5-0.5 0.5 0.5 0 0 1 0.5-0.5z"/>
-   <rect x="47" y="875" width="8" height="1" ry="0"/>
-   <path d="m44.5 878a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5zm0 1a0.5 0.5 0 0 1 0.5 0.5 0.5 0.5 0 0 1-0.5 0.5 0.5 0.5 0 0 1-0.5-0.5 0.5 0.5 0 0 1 0.5-0.5z"/>
-   <rect x="47" y="879" width="8" height="1" ry="0"/>
-  </g>
- </g>
+</style></defs>
+ <path class="ColorScheme-Text" fill="#31363b" d="m 12.501,3 a 1.5,1.5 180 0,1 1.5,1.5 a 1.5,1.5 180 0,1 -1.5,1.5 a 1.5,1.5 180 0,1 -1.5,-1.5 a 1.5,1.5 180 0,1 1.5,-1.5 z m 0,1 a 0.5,0.5 180 0,0 -0.5,0.5 a 0.5,0.5 180 0,0 0.5,0.5 a 0.5,0.5 180 0,0 0.5,-0.5 a 0.5,0.5 180 0,0 -0.5,-0.5 z"/>
+ <path class="ColorScheme-Text" fill="#31363b" d="M 10.001,4 L 2.001,4 L 2.001,5 L 10.001,5 Z"/>
+ <path class="ColorScheme-Text" fill="#31363b" d="m 12.501,7 a 1.5,1.5 180 0,1 1.5,1.5 a 1.5,1.5 180 0,1 -1.5,1.5 a 1.5,1.5 180 0,1 -1.5,-1.5 a 1.5,1.5 180 0,1 1.5,-1.5 z m 0,1 a 0.5,0.5 180 0,0 -0.5,0.5 a 0.5,0.5 180 0,0 0.5,0.5 a 0.5,0.5 180 0,0 0.5,-0.5 a 0.5,0.5 180 0,0 -0.5,-0.5 z"/>
+ <path class="ColorScheme-Text" fill="#31363b" d="M 10.001,8 L 2.001,8 L 2.001,9 L 10.001,9 Z"/>
+ <path class="ColorScheme-Text" fill="#31363b" d="m 12.501,11 a 1.5,1.5 180 0,1 1.5,1.5 a 1.5,1.5 180 0,1 -1.5,1.5 a 1.5,1.5 180 0,1 -1.5,-1.5 a 1.5,1.5 180 0,1 1.5,-1.5 z m 0,1 a 0.5,0.5 180 0,0 -0.5,0.5 a 0.5,0.5 180 0,0 0.5,0.5 a 0.5,0.5 180 0,0 0.5,-0.5 a 0.5,0.5 180 0,0 -0.5,-0.5 z"/>
+ <path class="ColorScheme-Text" fill="#31363b" d="M 10.001,12 L 2.001,12 L 2.001,13 L 10.001,13 Z"/>
 </svg>
