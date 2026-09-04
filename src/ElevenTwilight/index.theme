@@ -1,6 +1,7 @@
 [Icon Theme]
 Name=ElevenTwilight
 Comment=Windows inspired icon theme
+Version=2.5
 Inherits=breeze,Adwaita,hicolor
 Example=folder
 

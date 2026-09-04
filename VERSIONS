@@ -1,0 +1,5 @@
+# Versions of the themes in this repo: the single source of truth.
+# tools/build.py reads it for the Version key of index.theme and
+# tools/package.sh for the name of the release archives.
+ElevenTwilight=2.5
+ElevenTwilightColoredToolbars=1.0
