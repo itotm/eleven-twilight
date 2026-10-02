@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+  <defs>
+    <linearGradient id="grad1" x1="11.1" y1="2.6" x2="14.3" y2="5.8" gradientTransform="matrix(4.724 0 0 4.724 -42.75 -15.25)">
+      <stop offset="0" style="stop-color:#42a5e8"/>
+      <stop offset="1" style="stop-color:#3998e0"/>
+    </linearGradient>
+    <linearGradient id="grad2" x1="11.1" y1="2.6" x2="14.3" y2="5.8" gradientTransform="matrix(5.67 0 0 5.67 -52 -18.5)">
+      <stop offset="0" style="stop-color:#8dddfe"/>
+      <stop offset="1" style="stop-color:#65bef0"/>
+    </linearGradient>
+    <linearGradient id="grad3" x1="11.1" y1="2.6" x2="14.3" y2="5.8" gradientTransform="matrix(5.04 0 0 5.04 -45.67 -17.33)">
+      <stop offset="0" style="stop-color:#57b5ec"/>
+      <stop offset="1" style="stop-color:#5cb6ec"/>
+    </linearGradient>
+    <linearGradient id="grad4" x1="11.1" y1="5.3" x2="14.3" y2="8.5" gradientTransform="matrix(4.724 0 0 4.724 -42.75 -15.25)">
+      <stop offset="0" style="stop-color:#48a9e7"/>
+      <stop offset="1" style="stop-color:#47a8e6"/>
+    </linearGradient>
+  </defs>
+  
+  <path d="M15 1l-2.5 2.5 3.75 3.75-3.75 3.75 2.5 2.5L21 7.25z" fill="url(#grad1)"/>
+  <circle cx="6.5" cy="2.5" r="1.5" fill="url(#grad2)"/>
+  <circle cx="3" cy="10" r="2" fill="url(#grad3)"/>
+  <circle cx="8.5" cy="18.5" r="2.5" fill="url(#grad4)"/>
+</svg>

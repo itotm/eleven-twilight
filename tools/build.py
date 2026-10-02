@@ -1528,8 +1528,18 @@ DERIVED = ["22/actions", "32/actions", "scalable/actions"]
 # Note: "-symbolic" names are deliberately not overridden. GTK apps recolor any
 # symbolic icon on their own, flattening it to a single color, so a colored
 # version looks worse there: symbolic icons stay the monochrome ones from the
-# base theme. For the same reason the theme only ships the Actions context, so
-# category and tray icons (apps, status) remain inherited.
+# base theme. For the same reason the theme only draws the Actions context, so
+# category and tray icons (apps, status) remain inherited. The only files in
+# other contexts are unchanged copies of the base theme, see parent_shims().
+
+# Parent aliases left out on purpose: Kicker and Kickoff use bookmarks for the
+# Favorites category, which has to stay monochrome like the other categories,
+# and sidebar is the dash fallback of the many sidebar-*-symbolic names.
+NOT_ALIASED = {"bookmarks.svg", "sidebar.svg"}
+
+# Unchanged copies of parent icons live here, outside Directories, so they are
+# only reached through the shim symlinks.
+SHIM_STORE = "parent"
 
 
 def svg(grid, body):
@@ -1593,11 +1603,17 @@ def normalize(path, grid, body):
     return True
 
 
+def parent_index():
+    index = configparser.ConfigParser(interpolation=None, strict=False)
+    index.optionxform = str
+    index.read(PARENT / "index.theme")
+    return index
+
+
 def parent_dirs():
     """Directories of the parent theme, as listed in its index.theme."""
-    index = configparser.ConfigParser(interpolation=None, strict=False)
-    index.read(PARENT / "index.theme")
-    return [PARENT / d for d in index["Icon Theme"]["Directories"].split(",")]
+    return [PARENT / d.strip()
+            for d in parent_index()["Icon Theme"]["Directories"].split(",")]
 
 
 def parent_aliases():
@@ -1625,11 +1641,68 @@ def parent_aliases():
             targets.setdefault(f.name, set()).add(target)
     out = {}
     for alias, found in sorted(targets.items()):
-        if alias.endswith("-symbolic.svg") or len(found) != 1:
+        if (alias.endswith("-symbolic.svg") or alias in NOT_ALIASED
+                or len(found) != 1):
             continue
         target = found.pop()
         if target and target[0] == "actions" and target[1] in canonical:
             out[alias] = target[1]
+    return out
+
+
+def parent_shims(names):
+    """Parent icons repeated unchanged in this theme: {directory: {file: source}}.
+
+    KIconLoader applies the dash fallback inside each theme before moving to
+    the parent, so our names also catch longer requests: start-here-kde is
+    looked up here as start-here and start, and the start alias (go-first)
+    wins over the start-here-kde of ElevenTwilight; help-about-symbolic
+    becomes our colored help-about in the Plasma menus. To keep what the
+    parent would show, two kinds of names are added here with the parent
+    icon that the lookup picks there:
+
+    - every parent name that has one of our names as a dash prefix;
+    - name-symbolic for each of our names, when the parent has no such icon
+      and so falls back to its own monochrome one."""
+    dirs = [d for d in parent_dirs() if d.is_dir()]
+    files = {d: {f.stem: f for f in d.iterdir() if f.suffix == ".svg"}
+             for d in dirs}
+    stems = set().union(*files.values())
+    shims = {}
+    for d in dirs:
+        rel = d.relative_to(PARENT).as_posix()
+        for stem, f in files[d].items():
+            parts = stem.split("-")
+            if stem not in names and any("-".join(parts[:i]) in names
+                                         for i in range(1, len(parts))):
+                shims.setdefault(rel, {})[f.name] = f
+        for stem in names:
+            if f"{stem}-symbolic" not in stems and stem in files[d]:
+                shims.setdefault(rel, {})[f"{stem}-symbolic.svg"] = files[d][stem]
+    return shims
+
+
+def write_shims(shims):
+    """Copy each parent file once under SHIM_STORE and link the shims to it."""
+    for rel, entries in shims.items():
+        (THEME / rel).mkdir(parents=True, exist_ok=True)
+        for name, src in entries.items():
+            real = Path(os.path.realpath(src))
+            stored = THEME / SHIM_STORE / real.relative_to(PARENT.resolve())
+            if not stored.exists():
+                stored.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(real, stored)
+            (THEME / rel / name).symlink_to(
+                os.path.relpath(stored, THEME / rel))
+
+
+def shim_sections(rels):
+    """index.theme sections of the shim directories, as the parent has them."""
+    index = parent_index()
+    out = ""
+    for rel in rels:
+        out += f"\n[{rel}]\n"
+        out += "".join(f"{k}={v}\n" for k, v in index[rel].items())
     return out
 
 
@@ -1657,8 +1730,14 @@ def main():
         for alias, target in aliases.items():
             (THEME / d / alias).symlink_to(target)
 
+    names = set(ICONS) | {a[:-len(".svg")] for a in aliases}
+    shims = parent_shims(names)
+    write_shims(shims)
+    extra = sorted(set(shims) - set(DIRS))
+
     (THEME / "index.theme").write_text(
-        INDEX.format(name=NAME, version=ver, dirs=",".join(DIRS)))
+        INDEX.format(name=NAME, version=ver, dirs=",".join(DIRS + extra)) +
+        shim_sections(extra))
 
     print(f"{NAME} {ver}")
     print(f"{len(ICONS)} icons x 2 grids = {len(ICONS) * 2} SVG"
@@ -1667,6 +1746,8 @@ def main():
     print(f"{len(ICONS) * len(DERIVED)} size links,"
           f" {len(aliases) * len(SIZE_DIRS)} aliases"
           f" ({len(aliases)} names per directory)")
+    print(f"{sum(map(len, shims.values()))} parent shims in {len(shims)}"
+          f" directories")
     print(f"theme in {THEME}")
 
 

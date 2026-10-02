@@ -1,0 +1,12 @@
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme" xmlns="">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style></defs>
+ <path class="ColorScheme-Text" style="paint-order:markers stroke fill;fill:currentColor" fill="#31363b" stroke-opacity=".25" stroke-linecap="round" stroke-linejoin="round" d="m 1,5 l 0,8 c 0,1.108 0.892,2 2,2 l 9,0 c 1.108,0 2,-0.892 2,-2 l 0,-8 l -1,0 l 0,8 c 0,0.554 -0.446,1 -1,1 l -9,0 c -0.554,0 -1,-0.446 -1,-1 l 0,-8 l -1,0 z"/>
+ <path class="ColorScheme-Text" style="paint-order:markers stroke fill;fill:currentColor" fill="#31363b" stroke-opacity=".25" stroke-linecap="round" stroke-linejoin="round" d="M 5.20062895427,8.28644294737 L 8.20710556652,11.2929195596 L 7.49999878533,12.0000263408 L 4.49352217308,8.99354972856 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:markers stroke fill;fill:currentColor" fill="#31363b" stroke-opacity=".25" stroke-linecap="round" stroke-linejoin="round" d="M 9.799696068,8.286763512 L 6.79320577,11.29325381 L 7.50031577,12.00036381 L 10.506806068,8.993873512 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:markers stroke fill;fill:currentColor" fill="#31363b" stroke-opacity=".25" stroke-linecap="round" stroke-linejoin="round" d="M 7,6 L 8,6 L 8,11 L 7,11 Z"/>
+ <path class="ColorScheme-Text" style="paint-order:markers stroke fill;fill:currentColor" fill="#31363b" stroke-opacity=".25" stroke-linecap="round" stroke-linejoin="round" d="m 1,1 c -0.554,0 -1,0.446 -1,1 l 0,2 c 0,0.554 0.446,1 1,1 l 13,0 c 0.554,0 1,-0.446 1,-1 l 0,-2 c 0,-0.554 -0.446,-1 -1,-1 l -13,0 z m 0,1 l 13,0 l 0,2 l -13,0 l 0,-2 z"/>
+</svg>

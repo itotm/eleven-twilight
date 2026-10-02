@@ -1,0 +1,9 @@
+<svg width="16.005" height="16" viewBox="0 0 16.005 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs><style type="text/css" id="current-color-scheme" xmlns="">
+      .ColorScheme-Text {
+        color:#31363b;
+      }
+</style></defs>
+ <path class="ColorScheme-Text" style="fill:currentColor" fill="#31363b" d="M 4.304,2 l -2.857,8 l 1.279,0 l 0.605,-1.715 l 3.182,0 l 0.607,1.715 l 1.344,0 l -3.017,-8 z m 0.61,1.871 l 1.206,3.272 l -2.394,0 z M 10.005,5 l 0,1 l 2.5,0 c 0.214,0 0.5,0.307 0.5,0.5 l 0,0.5 l -2.5,0 c -0.46,0 -0.868,0.192 -1.125,0.484 A 1.509,1.509 0 0,0 9.005,8.5 c 0.00300000000004,0.36 0.135,0.726 0.39,1.016 c 0.257,0.289 0.656,0.484 1.11,0.484 l 3.5,0 l 0,-0.422 c 0.00800000000004,-0.047 0,-0.078 0,-0.078 l 0,-3 a 1.5,1.5 0 0,0 -1.5,-1.5 z m 0.5,3 l 2.5,0 l 0,1 l -2.5,0 c -0.199,0 -0.283,-0.055 -0.36,-0.14 a 0.572,0.572 0 0,1 -0.14,-0.36 a 0.56,0.56 0 0,1 0.125,-0.36 c 0.073,-0.082 0.164,-0.14 0.375,-0.14 z"/>
+ <path class="ColorScheme-Text" style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;text-orientation:mixed;shape-padding:0;isolation:auto;mix-blend-mode:normal;marker:none;fill:currentColor" fill="#31363b" d="M 2.505,10.793 l -2.354,2.353 a 0.500632,0.500632 0 1,0 0.708,0.708 l 1.646,-1.647 l 2,2 l 2,-2 l 2,2 l 2,-2 l 2,2 l 2.354,-2.353 a 0.500632,0.500632 0 1,0 -0.708,-0.708 l -1.646,1.647 l -2,-2 l -2,2 l -2,-2 l -2,2 z"/>
+</svg>
