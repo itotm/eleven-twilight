@@ -45,6 +45,7 @@ GREEN = "#107c10"
 GRAY = "#605e5c"
 GRAY_L = "#a19f9d"
 BROWN = "#c58e4a"
+WOOD = "#f2d4a0"
 
 # --- primitives --------------------------------------------------------------
 
@@ -206,6 +207,19 @@ def g_undo(cx, cy, a, t, bg=BLUE):
               f"L{n(cx - a * 0.62)} {n(cy - a * 0.02)}", stroke=PAPER, w=t))
 
 
+def g_play(cx, cy, a, t, bg=BLUE):
+    return P(f"M{n(cx - a * 0.55)} {n(cy - a * 0.9)}L{n(cx + a * 0.9)} {n(cy)}"
+             f"L{n(cx - a * 0.55)} {n(cy + a * 0.9)}Z",
+             fill=PAPER, stroke=PAPER, w=t * 0.5)
+
+
+def g_eye(cx, cy, a, t, bg=BLUE):
+    rx, ry = a * 1.2, a * 0.75
+    return (P(f"M{n(cx - rx)} {n(cy)}Q{n(cx)} {n(cy - 2 * ry)} {n(cx + rx)} {n(cy)}"
+              f"Q{n(cx)} {n(cy + 2 * ry)} {n(cx - rx)} {n(cy)}Z", fill=PAPER) +
+            C(cx, cy, a * 0.42, bg))
+
+
 def g_share(cx, cy, a, t, bg=BLUE):
     r = a * 0.42
     return (P(f"M{n(cx - a * 0.7)} {n(cy)}L{n(cx + a * 0.7)} {n(cy - a * 0.85)}"
@@ -314,6 +328,76 @@ def window(g):
     return (R(1, 1.6, 14, 12.8, PAPER, rx=1.5, stroke=BLUE, sw=1.25) +
             P("M1 3.1a1.5 1.5 0 0 1 1.5-1.5h11a1.5 1.5 0 0 1 1.5 1.5V5H1Z",
               fill=BLUE))
+
+
+def k24(g, draw):
+    """Draw a design made on the 24 grid on either grid. draw takes a stroke
+    multiplier: at 16 the geometry is scaled by 2/3 and the strokes made 15%
+    heavier, the same ratio as the icons drawn by hand on both grids."""
+    if g == 24:
+        return draw(1)
+    return G(draw(1.15), "scale(0.6667)")
+
+
+def dashes(t, on=4, off=3):
+    return f'stroke-dasharray="{n(on * t)} {n(off * t)}"'
+
+
+def history(t):
+    """Clock with a counterclockwise arrow, on the 24 grid."""
+    return (P("M4 12a8 8 0 1 0 2.4-5.7", stroke=BLUE, w=2.2 * t) +
+            P("M5.6 2.8v4.6h4.6", stroke=BLUE, w=2.2 * t) +
+            P("M12 7.6V12l3 2.2", stroke=GRAY, w=2 * t))
+
+
+def frame(t, fill=PAPER):
+    """Plain window frame on the 24 grid."""
+    return R(1.5, 3.5, 21, 17, fill, rx=2.2, stroke=BLUE, sw=1.5 * t)
+
+
+def eye(cx, cy, rx, ry, t, color=BLUE):
+    return (P(f"M{n(cx - rx)} {n(cy)}Q{n(cx)} {n(cy - 2 * ry)} {n(cx + rx)} {n(cy)}"
+              f"Q{n(cx)} {n(cy + 2 * ry)} {n(cx - rx)} {n(cy)}Z",
+              fill=PAPER, stroke=color, w=1.8 * t) +
+            C(cx, cy, ry * 0.6, color))
+
+
+def cursor(x, y, t):
+    """Mouse pointer with its tip at x, y, on the 24 grid."""
+    return P(f"M{n(x)} {n(y)}v10.4l2.7-2.5 1.9 4.2 2-.9-1.9-4.1h3.8Z",
+             fill=PAPER, stroke=GRAY, w=1.2 * t)
+
+
+def pencil(cx, cy):
+    """Vertical pencil pointing down, centered on cx, cy."""
+    return (R(cx - 2.1, cy - 9, 4.2, 3, RED_L, rx=0.9) +
+            R(cx - 2.1, cy - 6.4, 4.2, 10.4, AMBER) +
+            P(f"M{n(cx - 2.1)} {n(cy + 4)}L{n(cx)} {n(cy + 8.2)}"
+              f"L{n(cx + 2.1)} {n(cy + 4)}Z", fill=WOOD) +
+            P(f"M{n(cx - 0.75)} {n(cy + 6.7)}L{n(cx)} {n(cy + 8.2)}"
+              f"L{n(cx + 0.75)} {n(cy + 6.7)}Z", fill=GRAY))
+
+
+def marker(cx, cy):
+    """Vertical highlighter pointing down, centered on cx, cy."""
+    return (R(cx - 2.6, cy - 9, 5.2, 3, AMBER_D, rx=1) +
+            R(cx - 2.6, cy - 6.4, 5.2, 8.6, LINE, rx=0.6) +
+            R(cx - 2.6, cy + 2.2, 5.2, 1.8, GRAY) +
+            P(f"M{n(cx - 2)} {n(cy + 4)}h4l-.8 3.8h-2.4Z", fill=AMBER_D))
+
+
+def bin_(t, lid=RED):
+    """Trash can on the 24 grid, narrower than edit-delete."""
+    return (R(7.2, 3.6, 4.8, 2.6, lid, rx=1) +
+            R(2.4, 6, 14.4, 2.4, lid, rx=1.2) +
+            P("M4 9.4h11.2l-.9 11a1.8 1.8 0 0 1-1.8 1.6H6.7a1.8 1.8 0 0 1-1.8-1.6Z",
+              fill=LINE) +
+            P("M7.6 12.2v6.6M11.6 12.2v6.6", stroke=PAPER, w=1.3 * t))
+
+
+def mirror(body):
+    """Mirror a 24 grid design left to right."""
+    return G(body, "matrix(-1 0 0 1 24 0)")
 
 
 # --- icon registry ---------------------------------------------------------
@@ -919,6 +1003,449 @@ def _(g):
                                        stroke=PAPER, w=2.4)
     return C(8, 8, 6.4, RED) + P("M5.6 5.6 10.4 10.4M10.4 5.6 5.6 10.4",
                                  stroke=PAPER, w=1.8)
+
+
+# Views and panes group ------------------------------------------------------
+
+@icon("view-list-tree")
+def _(g):
+    def draw(t):
+        out = (R(2.6, 3.4, 3.4, 3.4, BLUE, rx=0.9) +
+               R(8, 4.1, 13.4, 2, EDGE, rx=1) +
+               P("M4.3 7.4V18.5M4.3 11.9h3M4.3 18.5h3", stroke=GRAY_L, w=1.3 * t))
+        for y in (10.2, 16.8):
+            out += R(8.4, y, 3.4, 3.4, BLUE_L, rx=0.9)
+            out += R(13.6, y + 0.7, 7.8, 2, EDGE, rx=1)
+        return out
+    return k24(g, draw)
+
+
+@icon("view-split-left-right")
+def _(g):
+    return k24(g, lambda t: (
+        frame(t) +
+        P("M3.7 3.5H12v17H3.7a2.2 2.2 0 0 1-2.2-2.2V5.7a2.2 2.2 0 0 1 2.2-2.2Z",
+          fill=BLUE_F) +
+        frame(t, "none") +
+        P("M4.6 8h4.6M4.6 11.5h4.6M4.6 15h3M15 8h4.6M15 11.5h4.6M15 15h3",
+          stroke=LINE, w=1.4 * t) +
+        P("M12 3.5v17", stroke=BLUE, w=1.5 * t)))
+
+
+@icon("view-split-top-bottom")
+def _(g):
+    return k24(g, lambda t: (
+        frame(t) +
+        P("M1.5 12V5.7a2.2 2.2 0 0 1 2.2-2.2h16.6a2.2 2.2 0 0 1 2.2 2.2V12Z",
+          fill=BLUE_F) +
+        frame(t, "none") +
+        P("M5 7h14M5 9.4h8M5 15.2h14M5 17.6h8", stroke=LINE, w=1.4 * t) +
+        P("M1.5 12h21", stroke=BLUE, w=1.5 * t)))
+
+
+@icon("view-sidetree")
+def _(g):
+    def draw(t):
+        out = (frame(t) +
+               P("M3.7 3.5H9.4v17H3.7a2.2 2.2 0 0 1-2.2-2.2V5.7a2.2 2.2 0 0 1 2.2-2.2Z",
+                 fill=BLUE_P) +
+               frame(t, "none") +
+               P("M9.4 3.5v17", stroke=BLUE, w=1.5 * t) +
+               P("M12.4 8h7M12.4 11.5h7M12.4 15h4.6", stroke=LINE, w=1.4 * t))
+        for x, y in ((3.6, 6.6), (4.8, 9.8), (4.8, 13), (3.6, 16.2)):
+            out += R(x, y, 9.4 - 1.6 - x, 1.6, BLUE, rx=0.8)
+        return out
+    return k24(g, draw)
+
+
+@icon("view-preview")
+def _(g):
+    return k24(g, lambda t: (
+        frame(t) +
+        P("M4.6 8h5M4.6 11.5h5M4.6 15h3.4", stroke=LINE, w=1.4 * t) +
+        R(12, 6.2, 8.2, 11.6, BLUE_F, rx=1) +
+        C(14.6, 9.2, 1.3, AMBER) +
+        P("M12.6 16.8 15.4 13l1.8 2 1.2-1.3 1.6 3.1Z", fill=GREEN)))
+
+
+@icon("view-hidden")
+def _(g):
+    return k24(g, lambda t: (
+        eye(12, 12, 10, 6.2, t) +
+        P("M4.4 3.6 19.6 20.4", stroke=PAPER, w=4.4 * t) +
+        P("M4.4 3.6 19.6 20.4", stroke=GRAY, w=2 * t)))
+
+
+@icon("view-sort")
+def _(g):
+    return k24(g, lambda t: (
+        P("M7 20V4.5M3.4 8.1 7 4.5l3.6 3.6", stroke=BLUE, w=2.2 * t) +
+        P("M17 4v15.5M13.4 15.9 17 19.5l3.6-3.6", stroke=GRAY, w=2.2 * t)))
+
+
+@icon("view-close")
+def _(g):
+    return window(g) + badge(g, RED, g_x)
+
+
+@icon("tab-new")
+def _(g):
+    # an active tab joined to the page and an inactive one beside it
+    return k24(g, lambda t: (
+        P("M12.6 7.6V5.2a1.4 1.4 0 0 1 1.4-1.4h5.8a1.4 1.4 0 0 1 1.4 1.4v2.4",
+          fill=BLUE_P, stroke=BLUE_L, w=1.3 * t) +
+        P("M1.5 20.3V5.2a1.4 1.4 0 0 1 1.4-1.4h6.8a1.4 1.4 0 0 1 1.4 1.4v2.6h9.6"
+          "a1.8 1.8 0 0 1 1.8 1.8v10.7a1.8 1.8 0 0 1-1.8 1.8H3.3a1.8 1.8 0 0 1-1.8-1.8Z",
+          fill=PAPER, stroke=BLUE, w=1.5 * t) +
+        P("M1.5 5.2a1.4 1.4 0 0 1 1.4-1.4h6.8a1.4 1.4 0 0 1 1.4 1.4v2.6H1.5Z",
+          fill=BLUE))) + badge(g, GREEN, g_plus)
+
+
+@icon("application-menu")
+def _(g):
+    return k24(g, lambda t: P("M4 6h16M4 12h16M4 18h16", stroke=GRAY, w=2.4 * t))
+
+
+@icon("process-stop")
+def _(g):
+    def draw(t):
+        pts = [(12 + 9.8 * math.cos(math.radians(22.5 + 45 * i)),
+                12 + 9.8 * math.sin(math.radians(22.5 + 45 * i))) for i in range(8)]
+        d = "M" + " ".join(f"{n(x)} {n(y)}" for x, y in pts) + "Z"
+        return (P(d, fill=RED, stroke=RED, w=1.2 * t) +
+                P("M8.6 8.6 15.4 15.4M15.4 8.6 8.6 15.4", stroke=PAPER, w=2.2 * t))
+    return k24(g, draw)
+
+
+# More navigation group -----------------------------------------------------
+
+@icon("go-down")
+def _(g):
+    if g == 24:
+        return P("M12 4v13M6 11l6 6 6-6", stroke=BLUE, w=2.4)
+    return P("M8 2.5v9M4 7.5l4 4 4-4", stroke=BLUE, w=1.8)
+
+
+@icon("go-top")
+def _(g):
+    return k24(g, lambda t: (P("M12 21V9.4M6 15.4l6-6 6 6", stroke=BLUE, w=2.4 * t) +
+                             R(4, 3, 16, 2.6, GRAY, rx=1.3)))
+
+
+@icon("go-bottom")
+def _(g):
+    return k24(g, lambda t: (P("M12 3v11.6M6 8.6l6 6 6-6", stroke=BLUE, w=2.4 * t) +
+                             R(4, 18.4, 16, 2.6, GRAY, rx=1.3)))
+
+
+@icon("go-first")
+def _(g):
+    return k24(g, lambda t: (P("M21 12H9.4M15.4 6l-6 6 6 6", stroke=BLUE, w=2.4 * t) +
+                             R(3, 4, 2.6, 16, GRAY, rx=1.3)))
+
+
+@icon("go-last")
+def _(g):
+    return k24(g, lambda t: (P("M3 12h11.6M8.6 6l6 6-6 6", stroke=BLUE, w=2.4 * t) +
+                             R(18.4, 4, 2.6, 16, GRAY, rx=1.3)))
+
+
+@icon("document-open-recent")
+def _(g):
+    return k24(g, history)
+
+
+# Zoom and transform group ----------------------------------------------------
+
+@icon("zoom-fit-width")
+def _(g):
+    return k24(g, lambda t: (
+        R(2.6, 4.6, 18.8, 14.8, BLUE_F, rx=2, stroke=BLUE, sw=1.4 * t) +
+        P("M6.4 12h11.2M9 9.4 6.4 12 9 14.6M15 9.4l2.6 2.6-2.6 2.6",
+          stroke=BLUE, w=1.8 * t)))
+
+
+@icon("zoom-fit-height")
+def _(g):
+    return k24(g, lambda t: (
+        R(4.6, 2.6, 14.8, 18.8, BLUE_F, rx=2, stroke=BLUE, sw=1.4 * t) +
+        P("M12 6.4v11.2M9.4 9 12 6.4 14.6 9M9.4 15l2.6 2.6 2.6-2.6",
+          stroke=BLUE, w=1.8 * t)))
+
+
+def rotate_right(t):
+    return (R(2.5, 9.5, 12, 12, BLUE_F, rx=1.8, stroke=BLUE, sw=1.5 * t) +
+            P("M9 5h4.5a6 6 0 0 1 6 6v3", stroke=BLUE, w=2.2 * t) +
+            P("M16.5 11.2l3 3 3-3", stroke=BLUE, w=2.2 * t))
+
+
+@icon("object-rotate-right")
+def _(g):
+    return k24(g, rotate_right)
+
+
+@icon("object-rotate-left")
+def _(g):
+    return k24(g, lambda t: mirror(rotate_right(t)))
+
+
+def flip(t):
+    return (P("M10 5 3 19h7Z", fill=BLUE, stroke=BLUE, w=1.4 * t) +
+            P("M14 5l7 14h-7Z", fill=BLUE_F, stroke=BLUE, w=1.4 * t) +
+            P("M12 2v20", stroke=GRAY_L, w=1.2 * t, cap="butt", extra=dashes(t, 2, 1.6)))
+
+
+@icon("object-flip-horizontal")
+def _(g):
+    return k24(g, flip)
+
+
+@icon("object-flip-vertical")
+def _(g):
+    return k24(g, lambda t: G(flip(t), "rotate(90 12 12)"))
+
+
+@icon("transform-crop")
+def _(g):
+    return k24(g, lambda t: (
+        P("M2.5 6.5h14a1 1 0 0 1 1 1v14", stroke=GRAY, w=2.2 * t) +
+        P("M6.5 2.5v14a1 1 0 0 0 1 1h14", stroke=BLUE, w=2.2 * t)))
+
+
+@icon("transform-browse")
+def _(g):
+    return k24(g, lambda t: P(
+        "M12 3v18M3 12h18M9.2 5.8 12 3l2.8 2.8M9.2 18.2 12 21l2.8-2.8"
+        "M5.8 9.2 3 12l2.8 2.8M18.2 9.2 21 12l-2.8 2.8", stroke=BLUE, w=2 * t))
+
+
+# Selection group -----------------------------------------------------------
+
+@icon("edit-select-none")
+def _(g):
+    return k24(g, lambda t: R(2.6, 2.6, 18.8, 18.8, PAPER, rx=2, stroke=BLUE,
+                              sw=1.6 * t, extra=dashes(t))) + badge(g, RED, g_x)
+
+
+@icon("edit-select-invert")
+def _(g):
+    return k24(g, lambda t: (
+        R(2.6, 2.6, 18.8, 18.8, BLUE_P, rx=2, stroke=BLUE, sw=1.6 * t,
+          extra=dashes(t)) +
+        R(7.4, 7.4, 9.2, 9.2, PAPER, rx=1.4, stroke=BLUE, sw=1.4 * t)))
+
+
+@icon("select-rectangular")
+def _(g):
+    return k24(g, lambda t: (
+        R(2.6, 2.6, 15.8, 13.8, BLUE_F, rx=1.6, stroke=BLUE, sw=1.6 * t,
+          extra=dashes(t)) +
+        cursor(13, 10.6, t)))
+
+
+@icon("edit-select-text")
+def _(g):
+    return k24(g, lambda t: (
+        P("M3 5.5h18M3 18.5h12", stroke=LINE, w=1.6 * t) +
+        R(2.6, 9.6, 13.8, 4.8, BLUE_P, rx=0.8) +
+        P("M4 12h11", stroke=BLUE, w=1.6 * t) +
+        P("M16.6 8h3.6M16.6 16h3.6M18.4 8v8", stroke=GRAY, w=1.6 * t)))
+
+
+@icon("edit-clear-history")
+def _(g):
+    return k24(g, history) + badge(g, RED, g_x)
+
+
+# Text formatting group ------------------------------------------------------
+
+@icon("format-text-bold")
+def _(g):
+    return k24(g, lambda t: P("M7 4.4h5.6a3.7 3.7 0 0 1 0 7.4H7Zm0 7.4h6.6"
+                              "a3.9 3.9 0 0 1 0 7.8H7Z", stroke=GRAY, w=2.8 * t))
+
+
+@icon("format-text-italic")
+def _(g):
+    return k24(g, lambda t: P("M10.5 4.5h8M5.5 19.5h8M14.5 4.5l-5 15",
+                              stroke=GRAY, w=2.2 * t))
+
+
+@icon("format-text-underline")
+def _(g):
+    return k24(g, lambda t: (P("M7 3.6v7.6a5 5 0 0 0 10 0V3.6", stroke=GRAY, w=2.4 * t) +
+                             P("M5 20.4h14", stroke=BLUE, w=2.4 * t)))
+
+
+@icon("format-text-strikethrough")
+def _(g):
+    return k24(g, lambda t: (
+        P("M16.6 6.6C15.7 5 14 4 12 4c-2.8 0-4.8 1.6-4.8 3.8 0 4.6 9.8 3.4 9.8 8.4"
+          " 0 2.3-2 3.8-4.9 3.8-2.2 0-4-1-4.9-2.7", stroke=GRAY, w=2.2 * t) +
+        P("M3.5 12h17", stroke=RED, w=2.2 * t)))
+
+
+@icon("format-indent-more")
+def _(g):
+    return k24(g, lambda t: (
+        P("M3 4.5h18M11 9.5h10M11 14.5h10M3 19.5h18", stroke=GRAY, w=2 * t) +
+        P("M3.4 8.4 7.6 12l-4.2 3.6Z", fill=BLUE, stroke=BLUE, w=1 * t)))
+
+
+@icon("format-indent-less")
+def _(g):
+    return k24(g, lambda t: (
+        P("M3 4.5h18M11 9.5h10M11 14.5h10M3 19.5h18", stroke=GRAY, w=2 * t) +
+        P("M7.6 8.4 3.4 12l4.2 3.6Z", fill=BLUE, stroke=BLUE, w=1 * t)))
+
+
+@icon("format-justify-left")
+def _(g):
+    return k24(g, lambda t: P("M3 5h18M3 9.7h12M3 14.3h18M3 19h12",
+                              stroke=GRAY, w=2.2 * t))
+
+
+@icon("format-justify-center")
+def _(g):
+    return k24(g, lambda t: P("M3 5h18M6 9.7h12M3 14.3h18M6 19h12",
+                              stroke=GRAY, w=2.2 * t))
+
+
+@icon("format-justify-right")
+def _(g):
+    return k24(g, lambda t: P("M3 5h18M9 9.7h12M3 14.3h18M9 19h12",
+                              stroke=GRAY, w=2.2 * t))
+
+
+@icon("tools-check-spelling")
+def _(g):
+    return k24(g, lambda t: (
+        P("M3 18 8.4 4.6 13.8 18M5 13.4h6.8", stroke=GRAY, w=2 * t) +
+        P("M12.6 16.2l3.4 3.4 6.4-7.2", stroke=GREEN, w=2.4 * t)))
+
+
+# Drawing and annotation group ----------------------------------------------
+
+@icon("draw-freehand")
+def _(g):
+    return k24(g, lambda t: (
+        P("M2.8 19.6c1.5-2.6 3-2.6 4 0s2.6 2.6 4 0", stroke=BLUE, w=1.8 * t) +
+        G(pencil(15, 9), "rotate(45 15 9)")))
+
+
+@icon("draw-highlight")
+def _(g):
+    return k24(g, lambda t: (
+        R(2.4, 18.2, 14, 3.6, AMBER, rx=1.2) +
+        G(marker(15.4, 8.6), "rotate(45 15.4 8.6)")))
+
+
+@icon("draw-text")
+def _(g):
+    return k24(g, lambda t: (
+        P("M4.5 6V4.5h13V6M11 4.5v15M8.5 19.5h5", stroke=GRAY, w=2.2 * t) +
+        P("M17 12.5h3.6M17 20.5h3.6M18.8 12.5v8", stroke=BLUE, w=1.6 * t)))
+
+
+@icon("draw-arrow")
+def _(g):
+    return k24(g, lambda t: P("M4.5 19.5 19 5M10.5 5H19v8.5", stroke=RED, w=2.4 * t))
+
+
+@icon("draw-rectangle")
+def _(g):
+    return k24(g, lambda t: R(3, 5, 18, 14, BLUE_F, rx=1.6, stroke=BLUE, sw=2 * t))
+
+
+@icon("draw-ellipse")
+def _(g):
+    return k24(g, lambda t: (f'<ellipse cx="12" cy="12" rx="9.4" ry="7" '
+                             f'fill="{BLUE_F}" stroke="{BLUE}" '
+                             f'stroke-width="{n(2 * t)}"/>'))
+
+
+# Page layout group -------------------------------------------------------
+
+def sheet(x, y, w, h, t, rows):
+    out = R(x, y, w, h, PAPER, rx=1.4, stroke=BLUE, sw=1.4 * t)
+    for i in range(rows):
+        right = w - 5.4 if i < rows - 1 else (w - 5.4) * 0.6
+        out += P(f"M{n(x + 2.7)} {n(y + 3.6 + 2.8 * i)}h{n(right)}",
+                 stroke=LINE, w=1.3 * t)
+    return out
+
+
+@icon("view-pages-single")
+def _(g):
+    return k24(g, lambda t: sheet(6, 2.5, 12, 19, t, 5))
+
+
+@icon("view-pages-continuous")
+def _(g):
+    return k24(g, lambda t: sheet(6, 1.5, 12, 9.6, t, 2) +
+               sheet(6, 12.9, 12, 9.6, t, 2))
+
+
+@icon("view-pages-facing")
+def _(g):
+    return k24(g, lambda t: sheet(1.5, 4, 10, 16, t, 4) +
+               sheet(12.5, 4, 10, 16, t, 4))
+
+
+# More media group -----------------------------------------------------------
+
+def skip(t):
+    return (P("M5 5.6 14.6 12 5 18.4Z", fill=BLUE, stroke=BLUE, w=2 * t) +
+            R(16.6, 4.6, 3, 14.8, BLUE, rx=1.2))
+
+
+@icon("media-skip-forward")
+def _(g):
+    return k24(g, skip)
+
+
+@icon("media-skip-backward")
+def _(g):
+    return k24(g, lambda t: mirror(skip(t)))
+
+
+@icon("media-record")
+def _(g):
+    return k24(g, lambda t: C(12, 12, 9.4, "none", RED, 1.6 * t) + C(12, 12, 6, RED))
+
+
+@icon("media-eject")
+def _(g):
+    return k24(g, lambda t: (
+        P("M12 4.6 19.6 13H4.4Z", fill=BLUE, stroke=BLUE, w=1.6 * t) +
+        R(4.4, 16, 15.2, 3.2, BLUE, rx=1.2)))
+
+
+# More files and tools group ------------------------------------------------
+
+@icon("document-preview")
+def _(g):
+    return page(g) + badge(g, BLUE, g_eye)
+
+
+@icon("bookmark-remove")
+def _(g):
+    if g == 24:
+        return star(10.6, 10.4, 9, AMBER) + badge(24, RED, g_minus)
+    return star(7, 7, 6, AMBER) + badge(16, RED, g_minus)
+
+
+@icon("trash-empty")
+def _(g):
+    return k24(g, lambda t: (bin_(t, GRAY) +
+                             star(19.4, 6.2, 3.6, AMBER, 4, 0.32) +
+                             star(20, 14, 2.4, AMBER, 4, 0.32)))
+
+
+@icon("system-run")
+def _(g):
+    return k24(g, lambda t: gear(10.4, 10.4, 8.8, 6.4, 8, GRAY) +
+               C(10.4, 10.4, 2.9, PAPER)) + badge(g, GREEN, g_play)
 
 
 # --- theme assembly -----------------------------------------------------
