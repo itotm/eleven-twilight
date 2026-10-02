@@ -8,6 +8,7 @@ icons, everything else is inherited from ElevenTwilight.
 
 Usage: python3 tools/build.py [--install]
 """
+import configparser
 import math
 import os
 import shutil
@@ -1028,20 +1029,43 @@ def normalize(path, grid, body):
     return True
 
 
-def parent_aliases(subdirs, suffix=""):
-    """Parent theme aliases pointing at the icons we are replacing."""
-    out = {}
-    canonical = {f"{k}{suffix}.svg" for k in ICONS}
-    for sub in subdirs:
-        d = PARENT / sub
+def parent_dirs():
+    """Directories of the parent theme, as listed in its index.theme."""
+    index = configparser.ConfigParser(interpolation=None, strict=False)
+    index.read(PARENT / "index.theme")
+    return [PARENT / d for d in index["Icon Theme"]["Directories"].split(",")]
+
+
+def parent_aliases():
+    """Parent theme aliases pointing at the icons we are replacing.
+
+    Once a name is in this theme it shadows the parent at every size and in
+    every context, so an alias is taken only when all the copies of that name
+    in the parent resolve to the same redrawn icon in an actions directory: a
+    name that is a real icon somewhere, points to different icons at different
+    sizes, or points to an app icon with the same file name (kfind is
+    apps/system-search.svg) is left to the parent. Symbolic names are never
+    taken, see the note above svg()."""
+    canonical = {f"{k}.svg" for k in ICONS}
+    targets = {}
+    for d in parent_dirs():
         if not d.is_dir():
             continue
-        for f in sorted(d.iterdir()):
-            if not f.is_symlink() or f.suffix != ".svg":
+        for f in d.iterdir():
+            if f.suffix != ".svg" or f.name in canonical:
                 continue
-            target = Path(os.path.realpath(f)).name
-            if target in canonical and f.name not in canonical:
-                out[f.name] = target
+            target = None
+            if f.is_symlink():
+                real = Path(os.path.realpath(f))
+                target = (real.parent.name, real.name)
+            targets.setdefault(f.name, set()).add(target)
+    out = {}
+    for alias, found in sorted(targets.items()):
+        if alias.endswith("-symbolic.svg") or len(found) != 1:
+            continue
+        target = found.pop()
+        if target and target[0] == "actions" and target[1] in canonical:
+            out[alias] = target[1]
     return out
 
 
@@ -1063,7 +1087,7 @@ def main():
         for d in DERIVED:
             (THEME / d / f"{name}.svg").symlink_to(f"../../24/actions/{name}.svg")
 
-    aliases = parent_aliases(SIZE_DIRS)
+    aliases = parent_aliases()
     for d in SIZE_DIRS:
         for alias, target in aliases.items():
             (THEME / d / alias).symlink_to(target)
