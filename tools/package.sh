@@ -57,6 +57,8 @@ esac
 [ -n "$themes" ] || themes=$(all_themes)
 
 mkdir -p "$outdir"
+# absolute, since the zip is written from inside src/
+outdir=$(cd "$outdir" && pwd)
 status=0
 
 for name in $themes; do
