@@ -86,7 +86,9 @@ for name in $themes; do
     if [ -z "$stamped" ]; then
         echo "$name: warning, index.theme has no Version key" >&2
     elif [ "$stamped" != "$version" ]; then
-        echo "$name: warning, index.theme says Version=$stamped instead of $version" >&2
+        echo "$name: index.theme says Version=$stamped instead of $version, skipped" >&2
+        status=1
+        continue
     fi
 
     if [ "$format" = tar.gz ] || [ "$format" = both ]; then
