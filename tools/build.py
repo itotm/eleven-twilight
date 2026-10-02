@@ -12,9 +12,16 @@ import configparser
 import math
 import os
 import shutil
-import subprocess
 import sys
 from pathlib import Path
+
+try:
+    import cairo
+    import gi
+    gi.require_version("Rsvg", "2.0")
+    from gi.repository import Rsvg
+except (ImportError, ValueError):
+    Rsvg = None
 
 ROOT = Path(__file__).resolve().parent.parent
 NAME = "ElevenTwilightColoredToolbars"
@@ -211,9 +218,11 @@ def g_share(cx, cy, a, t, bg=BLUE):
 
 # --- shared parts --------------------------------------------------------
 
-# Ink size every icon is normalized to, measured from how much of the grid the
-# ElevenTwilight icons fill at the same sizes.
-TARGET = {24: 22.0, 16: 15.2}
+# Ink size every icon is normalized to (longer side, in grid units). It keeps
+# the median size of the first release, whose icons sat next to the
+# ElevenTwilight ones at 16 px (median ink 14.0 there): measured with librsvg,
+# filling the whole grid made them clearly larger than the base theme.
+TARGET = {24: 19.4, 16: 13.8}
 
 GEO = {
     24: dict(bx=17.6, by=17.6, ring=6.1, disc=5.1, a=3.0, t=1.9),
@@ -246,8 +255,8 @@ def page(g, lines=True):
 
 def folder(g):
     if g == 24:
-        return (P("M1.5 5.5a2 2 0 0 1 2-2h6l2.2 2.2h10.8a2 2 0 0 1 2 2V19"
-                  "a2 2 0 0 1-2 2h-19a2 2 0 0 1-2-2Z", fill=AMBER_D) +
+        return (P("M1.5 5.5a2 2 0 0 1 2-2h6l2.2 2.2h8.8a2 2 0 0 1 2 2V19"
+                  "a2 2 0 0 1-2 2h-17a2 2 0 0 1-2-2Z", fill=AMBER_D) +
                 P("M1.5 10.4h21V19a2 2 0 0 1-2 2h-17a2 2 0 0 1-2-2Z", fill=AMBER))
     return (P("M1 4a1.4 1.4 0 0 1 1.4-1.4h3.8L7.6 4h6A1.4 1.4 0 0 1 15 5.4v7.2"
               "A1.4 1.4 0 0 1 13.6 14H2.4A1.4 1.4 0 0 1 1 12.6Z", fill=AMBER_D) +
@@ -425,8 +434,8 @@ def _(g):
     if g == 24:
         return (R(3.7, 1.7, 12.6, 16.6, BLUE_F, rx=2, stroke=BLUE, sw=1.4) +
                 R(7.7, 5.7, 12.6, 16.6, PAPER, rx=2, stroke=BLUE, sw=1.4))
-    return (R(2.1, 1.1, 8.8, 11.8, BLUE_F, rx=1.5, stroke=BLUE, sw=1.1) +
-            R(5.1, 4.1, 8.8, 11.8, PAPER, rx=1.5, stroke=BLUE, sw=1.1))
+    return (R(2.1, 1.1, 8.8, 11.4, BLUE_F, rx=1.5, stroke=BLUE, sw=1.1) +
+            R(5.1, 3.9, 8.8, 11.4, PAPER, rx=1.5, stroke=BLUE, sw=1.1))
 
 
 @icon("edit-paste")
@@ -1001,29 +1010,57 @@ def svg(grid, body):
             f'height="{grid}" viewBox="0 0 {grid} {grid}">\n {body}\n</svg>\n')
 
 
-def ink_box(path, grid, scale=10):
-    """Box covered by the non transparent pixels, in grid units."""
-    out = subprocess.run(
-        ["magick", "-background", "none", str(path),
-         "-resize", f"{grid * scale}x{grid * scale}", "-format", "%@", "info:"],
-        capture_output=True, text=True, check=True).stdout.strip()
-    wh, x, y = out.replace("+", " +").split()
-    w, h = wh.split("x")
-    return (int(x) / scale, int(y) / scale, int(w) / scale, int(h) / scale)
+def ink_box(body, grid, scale=10, threshold=32):
+    """Box covered by the opaque pixels, in grid units.
+
+    The body is rendered by librsvg straight at scale pixels per unit:
+    rendering at the grid size and upscaling blurs the edges and inflates the
+    box, and the ImageMagick internal renderer (MSVG) drops stroked paths
+    entirely. The canvas has a margin of half a grid on every side, so ink
+    drawn past the grid is measured instead of clipped. Pixels with alpha
+    under threshold are antialiasing fringe and ignored."""
+    pad = grid / 2
+    span = grid + 2 * pad
+    size = int(span * scale)
+    doc = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{n(span)}" '
+           f'height="{n(span)}" viewBox="{n(-pad)} {n(-pad)} {n(span)} {n(span)}">'
+           f'{body}</svg>')
+    surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, size, size)
+    viewport = Rsvg.Rectangle()
+    viewport.x, viewport.y, viewport.width, viewport.height = 0, 0, size, size
+    Rsvg.Handle.new_from_data(doc.encode()).render_document(
+        cairo.Context(surface), viewport)
+    surface.flush()
+    data, stride = surface.get_data(), surface.get_stride()
+    alpha_at = 3 if sys.byteorder == "little" else 0
+    x0, y0, x1, y1 = size, size, -1, -1
+    for y in range(size):
+        row = bytes(data[y * stride:y * stride + size * 4])[alpha_at::4]
+        if max(row) < threshold:
+            continue
+        xs = [x for x, a in enumerate(row) if a >= threshold]
+        x0, x1 = min(x0, xs[0]), max(x1, xs[-1])
+        y0 = min(y0, y)
+        y1 = y
+    if x1 < 0:
+        raise SystemExit("nothing rendered, cannot normalize")
+    return (x0 / scale - pad, y0 / scale - pad,
+            (x1 + 1 - x0) / scale, (y1 + 1 - y0) / scale)
 
 
 def normalize(path, grid, body):
     """Rescale the icon until its ink fills the grid like the base theme icons
-    do, and recenter it. Without ImageMagick the step is skipped."""
-    x, y, w, h = ink_box(path, grid)
-    if w <= 0 or h <= 0:
-        return False
+    do, and recenter it. Without librsvg the step is skipped."""
+    x, y, w, h = ink_box(body, grid)
     s = min(TARGET[grid] / w, TARGET[grid] / h)
     s = max(0.85, min(1.35, s))
-    if abs(s - 1) < 0.01:
-        return False
     tx = grid / 2 - s * (x + w / 2)
     ty = grid / 2 - s * (y + h / 2)
+    if abs(s - 1) < 0.01 and abs(tx) < 0.05 and abs(ty) < 0.05:
+        return False
+    if (s * x + tx < -0.01 or s * y + ty < -0.01 or
+            s * (x + w) + tx > grid + 0.01 or s * (y + h) + ty > grid + 0.01):
+        raise SystemExit(f"{path}: normalized ink would leave the canvas")
     wrapped = G(body, f"translate({n(tx)} {n(ty)}) scale({n(s)})")
     path.write_text(svg(grid, wrapped))
     return True
@@ -1070,19 +1107,20 @@ def parent_aliases():
 
 
 def main():
+    ver = version()
     if THEME.exists():
         shutil.rmtree(THEME)
     for d in DIRS:
         (THEME / d).mkdir(parents=True)
 
-    have_magick = shutil.which("magick") is not None
+    have_rsvg = Rsvg is not None
     scaled = 0
     for name, fn in sorted(ICONS.items()):
         for grid in (16, 24):
             f = THEME / f"{grid}/actions/{name}.svg"
             body = fn(grid)
             f.write_text(svg(grid, body))
-            if have_magick and normalize(f, grid, body):
+            if have_rsvg and normalize(f, grid, body):
                 scaled += 1
         for d in DERIVED:
             (THEME / d / f"{name}.svg").symlink_to(f"../../24/actions/{name}.svg")
@@ -1093,11 +1131,11 @@ def main():
             (THEME / d / alias).symlink_to(target)
 
     (THEME / "index.theme").write_text(
-        INDEX.format(name=NAME, version=version(), dirs=",".join(DIRS)))
+        INDEX.format(name=NAME, version=ver, dirs=",".join(DIRS)))
 
-    print(f"{NAME} {version()}")
+    print(f"{NAME} {ver}")
     print(f"{len(ICONS)} icons x 2 grids = {len(ICONS) * 2} SVG"
-          f" ({scaled} normalized" + ("" if have_magick else ", magick missing")
+          f" ({scaled} normalized" + ("" if have_rsvg else ", librsvg missing")
           + ")")
     print(f"{len(ICONS) * len(DERIVED)} size links,"
           f" {len(aliases) * len(SIZE_DIRS)} aliases"
