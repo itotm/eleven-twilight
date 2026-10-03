@@ -44,6 +44,7 @@ RED_D = "#d1503c"
 GREEN = "#107c10"
 GRAY = "#605e5c"
 GRAY_L = "#a19f9d"
+COG = "#76808b"
 BROWN = "#c58e4a"
 WOOD = "#f2d4a0"
 
@@ -237,6 +238,21 @@ def g_share(cx, cy, a, t, bg=BLUE):
 # ElevenTwilight ones at 16 px (median ink 14.0 there): measured with librsvg,
 # filling the whole grid made them clearly larger than the base theme.
 TARGET = {24: 19.4, 16: 13.8}
+
+# Per icon exceptions to TARGET, measured against the same icon of
+# ElevenTwilight at 16 (median ink 14.0, but 16 x 12 for its eye and 16 x 15
+# for its folders). None keeps the drawn size: a bare glyph normalized to the
+# ink of a full icon gets much heavier than the icons around it. Wide and flat
+# shapes are made longer, or they look smaller than the square ones.
+INK = {
+    "window-close": {16: None, 24: None},
+    "view-visible": {16: 15.6},
+    "view-hidden": {16: 15.6},
+    "folder-new": {16: 15.2},
+    "document-open": {16: 15.2},
+    "archive-insert": {16: 15},
+    "archive-extract": {16: 15},
+}
 
 GEO = {
     24: dict(bx=17.6, by=17.6, ring=6.1, disc=5.1, a=3.0, t=1.9),
@@ -583,11 +599,10 @@ def _(g):
 
 @icon("edit-find")
 def _(g):
+    # the bare lens of edit-find-replace: over a page it came out pale
     if g == 24:
-        return page(g, lines=False) + P("M8 9h8M8 12h5", stroke=LINE, w=1.4) + \
-            C(15.6, 15.6, 6.6, PAPER) + magnifier(15.4, 15.4, 4.9, 1.9)
-    return page(g, lines=False) + P("M5.4 6.4h5.2M5.4 8.6h3.4", stroke=LINE, w=1.2) + \
-        C(10.6, 10.6, 4.9, PAPER) + magnifier(10.5, 10.5, 3.5, 1.4)
+        return magnifier(10.4, 10.4, 6.8, 2.4)
+    return magnifier(6.9, 6.9, 4.5, 1.7)
 
 
 @icon("edit-find-replace")
@@ -915,9 +930,13 @@ def _(g):
 
 @icon("configure")
 def _(g):
+    # the gray cog of the Settings app (preferences-system): a blue one
+    # vanishes on dark panels and on the blue highlight of pressed buttons
     if g == 24:
-        return gear(12, 12, 10.4, 7.6, 8, BLUE) + C(12, 12, 3.4, PAPER)
-    return gear(8, 8, 7, 5.1, 8, BLUE) + C(8, 8, 2.3, PAPER)
+        return (gear(12, 12, 10.4, 7.6, 8, COG) + C(12, 12, 4.6, PAPER) +
+                C(12, 12, 3.1, BLUE))
+    return (gear(8, 8, 7, 5.1, 8, COG) + C(8, 8, 3.1, PAPER) +
+            C(8, 8, 2.1, BLUE))
 
 
 @icon("tools")
@@ -961,8 +980,8 @@ def _(g):
 @icon("window-close")
 def _(g):
     if g == 24:
-        return P("M6 6 18 18M18 6 6 18", stroke=RED, w=2.8)
-    return P("M4 4 12 12M12 4 4 12", stroke=RED, w=2)
+        return P("M7 7 17 17M17 7 7 17", stroke=RED, w=2.4)
+    return P("M4.5 4.5 11.5 11.5M11.5 4.5 4.5 11.5", stroke=RED, w=1.8)
 
 
 @icon("window-new")
@@ -1074,6 +1093,11 @@ def _(g):
         eye(12, 12, 10, 6.2, t) +
         P("M4.4 3.6 19.6 20.4", stroke=PAPER, w=4.4 * t) +
         P("M4.4 3.6 19.6 20.4", stroke=GRAY, w=2 * t)))
+
+
+@icon("view-visible")
+def _(g):
+    return k24(g, lambda t: eye(12, 12, 10, 6.2, t))
 
 
 @icon("view-sort")
@@ -1585,11 +1609,11 @@ def ink_box(body, grid, scale=10, threshold=32):
             (x1 + 1 - x0) / scale, (y1 + 1 - y0) / scale)
 
 
-def normalize(path, grid, body):
-    """Rescale the icon until its ink fills the grid like the base theme icons
-    do, and recenter it. Without librsvg the step is skipped."""
+def normalize(path, grid, body, target):
+    """Rescale the icon until its longer side is target, the size the base
+    theme icons fill, and recenter it. Without librsvg the step is skipped."""
     x, y, w, h = ink_box(body, grid)
-    s = min(TARGET[grid] / w, TARGET[grid] / h)
+    s = min(target / w, target / h)
     s = max(0.85, min(1.35, s))
     tx = grid / 2 - s * (x + w / 2)
     ty = grid / 2 - s * (y + h / 2)
@@ -1720,7 +1744,8 @@ def main():
             f = THEME / f"{grid}/actions/{name}.svg"
             body = fn(grid)
             f.write_text(svg(grid, body))
-            if have_rsvg and normalize(f, grid, body):
+            target = INK.get(name, {}).get(grid, TARGET[grid])
+            if have_rsvg and target and normalize(f, grid, body, target):
                 scaled += 1
         for d in DERIVED:
             (THEME / d / f"{name}.svg").symlink_to(f"../../24/actions/{name}.svg")
