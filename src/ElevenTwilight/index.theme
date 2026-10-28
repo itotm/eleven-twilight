@@ -1,12 +1,12 @@
 [Icon Theme]
 Name=ElevenTwilight
 Comment=Windows inspired icon theme
-Version=2.7.2
+Version=2.7.3
 Inherits=breeze,Adwaita,hicolor
 Example=folder
 
 FollowsColorScheme=true
-KDE-Extensions=.svg,.png
+KDE-Extensions=.svg
 DisplayDepth=32
 
 DesktopDefault=32
